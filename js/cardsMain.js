@@ -8,9 +8,9 @@ function shuffleCards(array) {
 }
 
 const categoryImg = {
-  "For Work": "../images/balls/gift-for-work.png",
-  "For Health": "../images/balls/gift-for-health.png",
-  "For Harmony": "../images/balls/gift-for-harmony.png",
+  "For Work": "../images/gifts/gift-for-work.png",
+  "For Health": "../images/gifts/gift-for-health.png",
+  "For Harmony": "../images/gifts/gift-for-harmony.png",
 };
 
 const giftContainer = document.getElementById("gifts");
@@ -44,7 +44,9 @@ fetch("../js/gifts.json")
       cardText.className = "card-text";
 
       const header4 = document.createElement("h4");
-      header4.className = `header-4 ${item.category.toLowerCase().replace(" ", "-")}`;
+      header4.className = `header-4 ${item.category
+        .toLowerCase()
+        .replace(" ", "-")}`;
       header4.textContent = item.category;
       cardText.appendChild(header4);
 
