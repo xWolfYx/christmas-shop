@@ -236,7 +236,7 @@ section {
 
 section {
   background-color: rgb(255, 70, 70);
-  background-image: url(../images/bg/bg-snow.png);
+  background-image: url(../images/backgrounds/bg-snow.png);
   background-size: cover;
   background-position: center;
   padding: 3.75rem 0.5rem;
@@ -244,7 +244,7 @@ section {
 }
 
 #hero {
-  background-image: url(../images/bg/bg-ball.png), url(../images/bg/bg-snow.png);
+  background-image: url(../images/backgrounds/bg-ball.png), url(../images/backgrounds/bg-snow.png);
   background-size: cover, cover;
   background-position: center, center;
   background-repeat: no-repeat;
@@ -292,7 +292,7 @@ section {
 #about-container #image-container {
   min-width: 50%;
   height: 33rem;
-  background-image: url(../images/santa.png);
+  background-image: url(../images/main-page-images/santa.png);
   background-size: cover;
   background-position: center;
   border-radius: 1.25rem;
@@ -454,7 +454,7 @@ section {
 }
 
 #cta {
-  background-image: url(../images/bg/bg-forest.png), url(../images/bg/bg-snow.png);
+  background-image: url(../images/backgrounds/bg-forest.png), url(../images/backgrounds/bg-snow.png);
   border-radius: 0 0 1.25rem 1.25rem;
 }
 #cta #cta-container {
