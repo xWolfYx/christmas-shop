@@ -596,15 +596,15 @@ section {
 }
 
 @media screen and (max-width: 986px) {
-  #footer #footer-container #contacts {
+  #footer > #footer-container > #contacts {
     flex-direction: column;
   }
 }
 @media screen and (max-width: 768px) {
-  #header #nav #nav-list {
+  #header > #nav > #nav-list {
     display: none;
   }
-  #header #nav #burger-menu-icon {
+  #burger-menu-icon {
     width: 40px;
     height: 40px;
     display: flex;
@@ -615,20 +615,20 @@ section {
     background-color: transparent;
     border: none;
   }
-  #header #nav #burger-menu-icon * {
+  #burger-menu-icon * {
     transition: 0.4s;
   }
-  #header #nav #burger-menu-icon .line1,
-  #header #nav #burger-menu-icon .line2 {
+  #burger-menu-icon .line1,
+  #burger-menu-icon .line2 {
     width: 20px;
     height: 1px;
     background-color: rgb(25, 28, 41);
     border-radius: 20px;
   }
-  #header #nav #burger-menu-icon .close1 {
+  #burger-menu-icon .close1 {
     transform: translateY(5px) rotate(-45deg);
   }
-  #header #nav #burger-menu-icon .close2 {
+  #burger-menu-icon .close2 {
     transform: translateY(-4px) rotate(45deg);
   }
   #footer {
@@ -693,7 +693,7 @@ section {
   }
 }
 @media (hover: none) {
-  #header nav #nav-list a:hover {
+  #header > nav > #nav-list > a:hover {
     color: rgb(25, 28, 41);
     background-color: transparent;
   }
@@ -711,16 +711,17 @@ section {
   .card:hover {
     color: rgb(25, 28, 41);
   }
-  #footer #footer-container #contacts div a:hover {
+  #footer > #footer-container > #contacts > div > a:hover {
     color: rgb(25, 28, 41);
-  }
-  #footer #footer-container #socials-container a:hover {
-    color: rgb(25, 28, 41);
-  }
-  #footer #footer-container #socials-container #socials div:hover svg path {
-    stroke: rgb(24, 28, 41);
   }
 }
+#socials-container a:hover {
+  color: rgb(25, 28, 41);
+}
+#socials-container #socials > div:hover svg path {
+  stroke: rgb(24, 28, 41);
+}
+
 a {
   transition: color 0.6s ease, background-color 0.6s ease;
 }
@@ -730,7 +731,7 @@ html {
 }
 
 #gifts {
-  background-image: url(../images/bg/bg-garland.png);
+  background-image: url(../images/backgrounds/bg-garland.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top center;
@@ -783,36 +784,38 @@ html {
   gap: 0.75rem;
 }
 
-#socials div svg path {
+#socials > div svg path {
   transition: stroke 0.6s ease;
 }
-#socials div:hover svg path {
+
+div:hover svg path {
   stroke: rgb(255, 70, 70);
 }
 
 @media screen and (max-width: 482px) {
-  #gifts #marketplace #tabs {
+  #gifts > #marketplace > #tabs {
     gap: 0;
   }
-  #gifts #marketplace #tabs .tab a {
+  #gifts > #marketplace > #tabs .tab > a {
     display: block;
     padding: 0.75rem 0.5rem;
     border-radius: 0.75rem;
   }
 }
 @media screen and (max-width: 350px) {
-  #gifts #marketplace #tabs {
+  #gifts > #marketplace > #tabs {
     flex-direction: column;
   }
 }
 @media (hover: none) {
-  #gifts #marketplace #tabs .tab a:hover {
+  #gifts > #marketplace > #tabs > .tab > a:hover {
     background-color: transparent;
   }
-  .card > a:hover {
-    color: rgb(25, 28, 41);
-  }
-  .card:hover {
-    color: rgb(25, 28, 41);
-  }
+}
+.card > a:hover {
+  color: rgb(25, 28, 41);
+}
+
+.card:hover {
+  color: rgb(25, 28, 41);
 }/*# sourceMappingURL=gifts.css.map */
