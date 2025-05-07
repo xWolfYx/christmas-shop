@@ -1,0 +1,135 @@
+@use "./styles";
+@use "fonts";
+@use "colors";
+@use "text";
+
+a {
+  transition:
+    color 0.6s ease,
+    background-color 0.6s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#gifts {
+  background-image: url(../images/bg/bg-garland.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+  border-radius: 1.25rem;
+
+  #marketplace {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1.25rem;
+
+    #text {
+      max-width: 426px;
+
+      text-align: center;
+      color: colors.$static-white;
+    }
+
+    #tabs {
+      list-style: none;
+      max-width: 474px;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+
+      .tab {
+        a {
+          white-space: nowrap;
+          display: block;
+          padding: 0.75rem 1.25rem;
+          border-radius: 0.75rem;
+        }
+
+        a:hover {
+          background-color: colors.$static-white-20;
+        }
+
+        a#gifts-icon-active {
+          color: colors.$static-white;
+          background-color: colors.$static-white-20;
+          pointer-events: none;
+        }
+
+        a {
+          color: colors.$static-white;
+          text-decoration: none;
+        }
+      }
+    }
+
+    #cards {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, 19.375rem);
+      justify-content: center;
+      align-items: center;
+      gap: 0.75rem;
+    }
+  }
+}
+
+#socials {
+  div svg path {
+    transition: stroke 0.6s ease;
+  }
+  div:hover svg path {
+    stroke: rgb(255, 70, 70);
+  }
+}
+
+@media screen and (max-width: 482px) {
+  #gifts {
+    #marketplace {
+      #tabs {
+        gap: 0;
+        .tab {
+          a {
+            display: block;
+            padding: 0.75rem 0.5rem;
+            border-radius: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #gifts {
+    #marketplace {
+      #tabs {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@media (hover: none) {
+  #gifts {
+    #marketplace {
+      #tabs {
+        .tab {
+          a:hover {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  .card > a:hover {
+    color: colors.$dark;
+  }
+  .card:hover {
+    color: colors.$dark;
+  }
+}
