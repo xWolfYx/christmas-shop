@@ -1,0 +1,25 @@
+{
+  "name": "christmas-shop",
+  "version": "1.0.0",
+  "description": "This project was initially build by me on one of the courses of **Rolling Scopes School** as a course task. \\ Idea, design and assets are of their creation. \\ I built from their inspiration. \\ [Original deployment](https://rolling-scopes-school.github.io/xwolfyx-JSFEEN2024Q4/christmas-shop/html/home.html)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xWolfYx/christmas-shop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xWolfYx/christmas-shop/issues"
+  },
+  "homepage": "https://github.com/xWolfYx/christmas-shop#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.26.0",
+    "eslint": "^9.26.0",
+    "globals": "^16.1.0"
+  }
+}
