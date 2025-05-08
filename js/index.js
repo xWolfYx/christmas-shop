@@ -1,4 +1,3 @@
-// burger menu activation script
 const burgerMenu = document.getElementById("burger-menu-icon");
 const burgerFirstLine = burgerMenu.firstElementChild;
 const burgerSecondLine = burgerMenu.lastElementChild;
@@ -22,7 +21,6 @@ function toggleBurgerMenu() {
   }
 }
 
-// the button to scroll up on tablets and mobile phones
 window.onscroll = function () {
   showScrollButton();
 };
