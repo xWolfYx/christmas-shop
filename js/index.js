@@ -1,10 +1,10 @@
-const burgerMenu = document.getElementById("burger-menu-icon");
-const burgerFirstLine = burgerMenu.firstElementChild;
-const burgerSecondLine = burgerMenu.lastElementChild;
+const burgerMenuIcon = document.getElementById("burger-menu-icon");
+const burgerFirstLine = burgerMenuIcon.firstElementChild;
+const burgerSecondLine = burgerMenuIcon.lastElementChild;
 const topScrollButton = document.getElementById("top-btn");
 let isBurgerMenuOpen = false;
 
-burgerMenu.addEventListener("click", toggleBurgerMenu);
+burgerMenuIcon.addEventListener("click", toggleBurgerMenu);
 
 window.addEventListener("scroll", showScrollButton);
 
