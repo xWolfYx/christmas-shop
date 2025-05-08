@@ -2,6 +2,7 @@ const burgerMenuIcon = document.getElementById("burger-menu-icon");
 const burgerFirstLine = burgerMenuIcon.firstElementChild;
 const burgerSecondLine = burgerMenuIcon.lastElementChild;
 const topScrollButton = document.getElementById("top-btn");
+const burgerMenu = document.getElementById("burger-menu");
 let isBurgerMenuOpen = false;
 
 burgerMenuIcon.addEventListener("click", toggleBurgerMenu);
@@ -11,7 +12,6 @@ window.addEventListener("scroll", showScrollButton);
 topScrollButton.addEventListener("click", scrollUp);
 
 function toggleBurgerMenu() {
-  const burgerMenu = document.getElementById("burger-menu");
   if (!isBurgerMenuOpen) {
     burgerFirstLine.classList.add("close1");
     burgerSecondLine.classList.add("close2");
