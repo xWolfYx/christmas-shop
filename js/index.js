@@ -1,7 +1,8 @@
 const burgerMenu = document.getElementById("burger-menu-icon");
 const burgerFirstLine = burgerMenu.firstElementChild;
 const burgerSecondLine = burgerMenu.lastElementChild;
-let active = false;
+const topScrollButton = document.getElementById("top-btn");
+let isBurgerMenuOpen = false;
 
 burgerMenu.addEventListener("click", toggleBurgerMenu);
 
@@ -11,23 +12,21 @@ topScrollButton.addEventListener("click", scrollUp);
 
 function toggleBurgerMenu() {
   const burgerMenu = document.getElementById("burger-menu");
-  if (!active) {
+  if (!isBurgerMenuOpen) {
     burgerFirstLine.classList.add("close1");
     burgerSecondLine.classList.add("close2");
     burgerMenu.style.width = "100%";
     document.body.style.overflow = "hidden";
-    active = true;
+    isBurgerMenuOpen = true;
   } else {
     burgerFirstLine.classList.remove("close1");
     burgerSecondLine.classList.remove("close2");
     document.body.style.overflow = "visible";
     burgerMenu.style.width = "0";
-    active = false;
+    isBurgerMenuOpen = false;
   }
 }
 
-
-const topScrollButton = document.getElementById("top-btn");
 function showScrollButton() {
   if (document.documentElement.scrollTop > 300) {
     topScrollButton.style.visibility = "visible";
@@ -37,6 +36,7 @@ function showScrollButton() {
     topScrollButton.style.opacity = "0";
   }
 }
+
 function scrollUp() {
   document.documentElement.scrollTop = 0;
 }
