@@ -7,6 +7,8 @@ burgerMenu.addEventListener("click", toggleBurgerMenu);
 
 window.addEventListener("scroll", showScrollButton);
 
+topScrollButton.addEventListener("click", scrollUp);
+
 function toggleBurgerMenu() {
   const burgerMenu = document.getElementById("burger-menu");
   if (!active) {
@@ -24,6 +26,7 @@ function toggleBurgerMenu() {
   }
 }
 
+
 const topScrollButton = document.getElementById("top-btn");
 function showScrollButton() {
   if (document.documentElement.scrollTop > 300) {
@@ -34,9 +37,6 @@ function showScrollButton() {
     topScrollButton.style.opacity = "0";
   }
 }
-topScrollButton.onclick = function () {
-  scrollUp();
-};
 function scrollUp() {
   document.documentElement.scrollTop = 0;
 }
