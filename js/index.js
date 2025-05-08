@@ -7,7 +7,7 @@ let isBurgerMenuOpen = false;
 
 burgerMenuIcon.addEventListener("click", toggleBurgerMenu);
 
-window.addEventListener("scroll", showScrollButton);
+window.addEventListener("scroll", toggleScrollButton);
 
 topScrollButton.addEventListener("click", scrollUp);
 
@@ -30,14 +30,18 @@ function openBurgerMenu() {
   document.body.style.overflow = "hidden";
 }
 
-function showScrollButton() {
-  if (document.documentElement.scrollTop > 300) {
-    topScrollButton.style.visibility = "visible";
-    topScrollButton.style.opacity = "1";
-  } else {
-    topScrollButton.style.visibility = "hidden";
-    topScrollButton.style.opacity = "0";
-  }
+function toggleScrollButton() {
+  document.documentElement.scrollTop > 300 ? showTopButton() : hideTopButton();
+}
+
+function showTopButton() {
+  topScrollButton.style.visibility = "visible";
+  topScrollButton.style.opacity = "1";
+}
+
+function hideTopButton() {
+  topScrollButton.style.visibility = "hidden";
+  topScrollButton.style.opacity = "0";
 }
 
 function scrollUp() {
