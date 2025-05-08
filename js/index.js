@@ -3,6 +3,8 @@ const burgerMenu = document.getElementById("burger-menu-icon");
 const burgerFirstLine = burgerMenu.firstElementChild;
 const burgerSecondLine = burgerMenu.lastElementChild;
 let active = false;
+
+burgerMenu.addEventListener("click", toggleBurgerMenu);
 function toggleBurgerMenu() {
   const burgerMenu = document.getElementById("burger-menu");
   if (!active) {
