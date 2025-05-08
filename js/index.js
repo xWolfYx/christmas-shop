@@ -12,19 +12,22 @@ window.addEventListener("scroll", showScrollButton);
 topScrollButton.addEventListener("click", scrollUp);
 
 function toggleBurgerMenu() {
-  if (!isBurgerMenuOpen) {
-    burgerFirstLine.classList.add("close1");
-    burgerSecondLine.classList.add("close2");
-    burgerMenu.style.width = "100%";
-    document.body.style.overflow = "hidden";
-    isBurgerMenuOpen = true;
-  } else {
-    burgerFirstLine.classList.remove("close1");
-    burgerSecondLine.classList.remove("close2");
-    document.body.style.overflow = "visible";
-    burgerMenu.style.width = "0";
-    isBurgerMenuOpen = false;
-  }
+  !isBurgerMenuOpen ? openBurgerMenu() : closeBurgerMenu();
+  isBurgerMenuOpen = !isBurgerMenuOpen;
+}
+
+function closeBurgerMenu() {
+  burgerFirstLine.classList.remove("close1");
+  burgerSecondLine.classList.remove("close2");
+  document.body.style.overflow = "visible";
+  burgerMenu.style.width = "0";
+}
+
+function openBurgerMenu() {
+  burgerFirstLine.classList.add("close1");
+  burgerSecondLine.classList.add("close2");
+  burgerMenu.style.width = "100%";
+  document.body.style.overflow = "hidden";
 }
 
 function showScrollButton() {
