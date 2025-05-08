@@ -4,6 +4,9 @@ const burgerSecondLine = burgerMenu.lastElementChild;
 let active = false;
 
 burgerMenu.addEventListener("click", toggleBurgerMenu);
+
+window.addEventListener("scroll", showScrollButton);
+
 function toggleBurgerMenu() {
   const burgerMenu = document.getElementById("burger-menu");
   if (!active) {
@@ -21,9 +24,6 @@ function toggleBurgerMenu() {
   }
 }
 
-window.onscroll = function () {
-  showScrollButton();
-};
 const topScrollButton = document.getElementById("top-btn");
 function showScrollButton() {
   if (document.documentElement.scrollTop > 300) {
