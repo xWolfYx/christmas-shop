@@ -3,9 +3,14 @@ const burgerFirstLine = burgerMenuIcon.firstElementChild;
 const burgerSecondLine = burgerMenuIcon.lastElementChild;
 const topScrollButton = document.getElementById("top-btn");
 const burgerMenu = document.getElementById("burger-menu");
+const burgerMenuListItems = document.querySelectorAll(".burger-menu-item");
 let isBurgerMenuOpen = false;
 
 burgerMenuIcon.addEventListener("click", toggleBurgerMenu);
+
+burgerMenuListItems.forEach((item) =>
+  item.addEventListener("click", toggleBurgerMenu)
+);
 
 window.addEventListener("scroll", toggleScrollButton);
 
