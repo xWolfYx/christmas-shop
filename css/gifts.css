@@ -280,11 +280,13 @@ section {
   border-radius: 1.25rem;
   background-color: rgb(255, 255, 255);
 }
-#about-container #about-text-container {
+
+#about-text-container {
   margin: 0;
   padding: 0 3.75rem;
 }
-#about-container #about-text-container #text {
+
+#text {
   padding: 3.75rem 0;
   color: rgb(25, 28, 41);
   width: min(26.625rem, 100%);
@@ -292,10 +294,12 @@ section {
   flex-flow: column nowrap;
   gap: 1.25rem;
 }
-#about-container #about-text-container #text .caption {
+
+.caption {
   color: rgb(255, 70, 70);
 }
-#about-container #image-container {
+
+#image-container {
   min-width: 50%;
   height: 33rem;
   background-image: url(../images/main-page-images/santa.png);

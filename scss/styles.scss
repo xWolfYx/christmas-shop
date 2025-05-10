@@ -205,34 +205,34 @@ section {
   justify-content: space-between;
   border-radius: 1.25rem;
   background-color: colors.$static-white;
+}
 
-  #about-text-container {
-    margin: 0;
-    padding: 0 3.75rem;
+#about-text-container {
+  margin: 0;
+  padding: 0 3.75rem;
+}
 
-    #text {
-      padding: 3.75rem 0;
-      color: colors.$dark;
-      width: min(26.625rem, 100%);
+#text {
+  padding: 3.75rem 0;
+  color: colors.$dark;
+  width: min(26.625rem, 100%);
 
-      display: flex;
-      flex-flow: column nowrap;
-      gap: 1.25rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1.25rem;
+}
 
-      .caption {
-        color: colors.$primary;
-      }
-    }
-  }
+.caption {
+  color: colors.$primary;
+}
 
-  #image-container {
-    min-width: 50%;
-    height: 33rem;
-    background-image: url(../images/main-page-images/santa.png);
-    background-size: cover;
-    background-position: center;
-    border-radius: 1.25rem;
-  }
+#image-container {
+  min-width: 50%;
+  height: 33rem;
+  background-image: url(../images/main-page-images/santa.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 1.25rem;
 }
 
 #slider {
