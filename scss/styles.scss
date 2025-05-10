@@ -695,12 +695,3 @@ section {
     color: colors.$dark;
   }
 }
-
-#socials-container {
-  a:hover {
-    color: colors.$dark;
-  }
-  #socials > div:hover svg path {
-    stroke: rgb(24, 28, 41);
-  }
-}
