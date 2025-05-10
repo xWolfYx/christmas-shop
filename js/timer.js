@@ -1,3 +1,8 @@
+const daysElem = document.getElementById("days");
+const hoursElem = document.getElementById("hours");
+const minutesElem = document.getElementById("minutes");
+const secondsElem = document.getElementById("seconds");
+
 function countdownTimer() {
   const targetDate = new Date(
     Date.UTC(new Date().getUTCFullYear() + 1, 0, 1, 0, 0, 0)
@@ -16,10 +21,10 @@ function countdownTimer() {
   const remMinutes = minutes % 60;
   const remSeconds = seconds % 60;
 
-  document.getElementById("days").innerText = remDays;
-  document.getElementById("hours").innerText = remHours;
-  document.getElementById("minutes").innerText = remMinutes;
-  document.getElementById("seconds").innerText = remSeconds;
+  daysElem.innerText = remDays;
+  hoursElem.innerText = remHours;
+  minutesElem.innerText = remMinutes;
+  secondsElem.innerText = remSeconds;
 }
 const countDown = setInterval(countdownTimer, 1000);
 countdownTimer();
