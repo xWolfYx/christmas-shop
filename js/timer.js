@@ -10,15 +10,10 @@ function displayCountdown() {
   const currentTime = new Date();
   const difference = targetDate - currentTime;
 
-  const seconds = Math.floor(difference / 1000);
-  const minutes = Math.floor(seconds / 60);
-  const hours = Math.floor(minutes / 60);
-  const days = Math.floor(hours / 24);
-
-  const remDays = days;
-  const remHours = hours % 24;
-  const remMinutes = minutes % 60;
-  const remSeconds = seconds % 60;
+  const remDays = Math.floor(difference / (1000 * 60 * 60 * 24));
+  const remHours = Math.floor((difference / (1000 * 60 * 60)) % 24);
+  const remMinutes = Math.floor((difference / (1000 * 60)) % 60);
+  const remSeconds = Math.floor((difference / 1000) % 60);
 
   daysElem.innerText = remDays;
   hoursElem.innerText = remHours;
