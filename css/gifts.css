@@ -505,7 +505,8 @@ section {
   width: min(100%, 90rem);
   padding: 3.75rem 0.5rem;
 }
-#footer #footer-container {
+
+#footer-container {
   margin: auto;
   width: 90%;
   display: flex;
@@ -513,13 +514,14 @@ section {
   gap: 3.75rem;
   align-content: space-between;
 }
-#footer #footer-container #contacts {
+
+#contacts {
   display: flex;
   flex-flow: row;
   justify-content: center;
   gap: 0.75rem;
 }
-#footer #footer-container #contacts div {
+#contacts div {
   background-color: rgb(236, 243, 248);
   display: flex;
   flex: 1;
@@ -527,17 +529,17 @@ section {
   justify-content: center;
   border-radius: 1.25rem;
 }
-#footer #footer-container #contacts div a {
+#contacts div a {
   text-decoration: none;
   color: rgb(25, 28, 41);
   border-radius: inherit;
   width: 100%;
   height: 100%;
 }
-#footer #footer-container #contacts div a:hover {
+#contacts div a:hover {
   color: rgb(255, 70, 70);
 }
-#footer #footer-container #contacts div div {
+#contacts div div {
   padding: 1.25rem;
   display: flex;
   flex-flow: column nowrap;
@@ -545,11 +547,12 @@ section {
   align-items: center;
   gap: 0.75rem;
 }
-#footer #footer-container #contacts div div img {
+#contacts div div img {
   width: 5rem;
   height: 5rem;
 }
-#footer #footer-container #socials-container {
+
+#socials-container {
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -557,14 +560,15 @@ section {
   align-self: center;
   gap: 0.75rem;
 }
-#footer #footer-container #socials-container a {
+#socials-container a {
   color: rgb(25, 28, 41);
   text-decoration: none;
 }
-#footer #footer-container #socials-container a:hover {
+#socials-container a:hover {
   color: rgb(255, 70, 70);
 }
-#footer #footer-container #socials-container #socials {
+
+#socials {
   max-width: 12.25rem;
   display: flex;
   flex-flow: row nowrap;
@@ -572,14 +576,14 @@ section {
   align-items: center;
   gap: 0.75rem;
 }
-#footer #footer-container #socials-container #socials div {
+#socials div {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 2.5rem;
   height: 2.5rem;
 }
-#footer #footer-container #socials-container #socials div a {
+#socials div a {
   padding: 0.5rem;
   display: flex;
   justify-content: center;
@@ -587,10 +591,10 @@ section {
   width: 100%;
   height: 100%;
 }
-#footer #footer-container #socials-container #socials div svg path {
+#socials div svg path {
   transition: stroke 0.6s ease;
 }
-#footer #footer-container #socials-container #socials div:hover svg path {
+#socials div:hover svg path {
   stroke: rgb(255, 70, 70);
 }
 
