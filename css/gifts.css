@@ -599,7 +599,7 @@ section {
 }
 
 @media screen and (max-width: 986px) {
-  #footer > #footer-container > #contacts {
+  #contacts {
     flex-direction: column;
   }
 }
