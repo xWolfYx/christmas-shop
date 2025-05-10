@@ -604,10 +604,10 @@ section {
   }
 }
 @media screen and (max-width: 768px) {
-  #header > #nav #nav-list {
+  #nav-list {
     display: none;
   }
-  #header > #nav #burger-menu-icon {
+  #burger-menu-icon {
     width: 40px;
     height: 40px;
     display: flex;
@@ -618,30 +618,30 @@ section {
     background-color: transparent;
     border: none;
   }
-  #header > #nav #burger-menu-icon * {
+  #burger-menu-icon * {
     transition: 0.4s;
   }
-  #header > #nav #burger-menu-icon .line1,
-  #header > #nav #burger-menu-icon .line2 {
+  .line1,
+  .line2 {
     width: 20px;
     height: 1px;
     background-color: rgb(25, 28, 41);
     border-radius: 20px;
   }
-  #header > #nav #burger-menu-icon .close1 {
+  .close1 {
     transform: translateY(5px) rotate(-45deg);
   }
-  #header > #nav #burger-menu-icon .close2 {
+  .close2 {
     transform: translateY(-4px) rotate(45deg);
   }
-  #header > #nav #footer {
+  #footer {
     width: 100%;
     padding: 3.75rem 0.5rem;
   }
-  #header > #nav #footer #footer-container {
+  #footer-container {
     width: 98%;
   }
-  #header > #nav #footer #footer-container #contacts {
+  #contacts {
     display: flex;
     flex-flow: column;
     justify-content: center;
