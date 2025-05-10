@@ -677,7 +677,7 @@ section {
   #about-container {
     flex-flow: column nowrap;
   }
-  #about-container #image-container {
+  #image-container {
     width: 100%;
   }
 }
