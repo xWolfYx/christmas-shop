@@ -219,7 +219,7 @@ section {
   height: 100%;
   background-color: rgb(255, 255, 255);
   display: flex;
-  transition: 0.6s;
+  transition: 0.4s;
 }
 #burger-menu ul {
   display: flex;
@@ -330,7 +330,7 @@ section {
   max-width: 124.5rem;
   height: 12.5rem;
   margin-top: 1.25rem;
-  transition: 0.6s ease;
+  transition: 0.4s ease;
 }
 
 #row-container {
@@ -372,7 +372,7 @@ section {
 }
 
 .slider-button:hover {
-  transition: all 0.6s ease;
+  transition: all 0.4s ease;
   background-color: rgb(255, 255, 255);
 }
 .slider-button:hover svg path {
@@ -406,13 +406,13 @@ section {
 .card {
   background-color: rgb(236, 243, 248);
   border-radius: 1.25rem;
-  transition: all 0.6s;
+  transition: all 0.4s;
 }
 .card:hover {
   cursor: pointer;
 }
 .card:hover > .card-text > h3 {
-  transition: 0.6s;
+  transition: 0.4s;
   color: rgb(255, 70, 70);
 }
 
@@ -592,7 +592,7 @@ section {
   height: 100%;
 }
 #socials div svg path {
-  transition: stroke 0.6s ease;
+  transition: stroke 0.4s ease;
 }
 #socials div:hover svg path {
   stroke: rgb(255, 70, 70);
@@ -659,7 +659,7 @@ section {
     position: fixed;
     right: 8vw;
     bottom: 123px;
-    transition: 0.6s;
+    transition: 0.4s;
   }
   #top-btn svg {
     position: absolute;
@@ -705,7 +705,7 @@ section {
     background-color: rgb(25, 28, 41);
   }
   .slider-button:hover {
-    transition: all 0.6s ease;
+    transition: all 0.4s ease;
     background-color: transparent;
   }
   .slider-button:hover svg path {
