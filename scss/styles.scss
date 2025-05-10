@@ -237,73 +237,73 @@ section {
 
 #slider {
   color: colors.$static-white;
+}
 
-  #slider-container {
-    max-width: 79.75rem;
-    margin: auto;
+#slider-container {
+  max-width: 79.75rem;
+  margin: auto;
+}
 
-    #slider-text {
-      max-width: 26.625rem;
-      margin: auto;
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
-      gap: 0.75rem;
-    }
+#slider-text {
+  max-width: 26.625rem;
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 0.75rem;
+}
 
-    #slider-row {
-      max-width: 124.5rem;
-      height: 12.5rem;
-      margin-top: 1.25rem;
-      transition: 0.6s ease;
+#slider-row {
+  max-width: 124.5rem;
+  height: 12.5rem;
+  margin-top: 1.25rem;
+  transition: 0.6s ease;
+}
 
-      #row-container {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        gap: 1.25rem;
+#row-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 1.25rem;
+}
 
-        .img-cont {
-          height: 12.5rem;
-          max-width: 12.5rem;
+.img-cont {
+  height: 12.5rem;
+  max-width: 12.5rem;
 
-          img {
-            height: inherit;
-            width: inherit;
-            border-radius: 1.25rem;
-          }
-        }
-      }
-    }
+  img {
+    height: inherit;
+    width: inherit;
+    border-radius: 1.25rem;
+  }
+}
 
-    #slider-buttons {
-      margin-top: 1.25rem;
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 1.25rem;
+#slider-buttons {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.25rem;
+}
 
-      .slider-button {
-        cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 3.5rem;
-        height: 3.5rem;
-        border-radius: 1.25rem;
-        border: 1px solid colors.$static-white;
-        background-color: transparent;
-      }
+.slider-button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1.25rem;
+  border: 1px solid colors.$static-white;
+  background-color: transparent;
+}
 
-      .slider-button:hover {
-        transition: all 0.6s ease;
-        background-color: colors.$static-white;
-        svg path {
-          stroke: rgb(255, 70, 70);
-        }
-      }
-    }
+.slider-button:hover {
+  transition: all 0.6s ease;
+  background-color: colors.$static-white;
+  svg path {
+    stroke: rgb(255, 70, 70);
   }
 }
 

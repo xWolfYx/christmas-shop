@@ -311,11 +311,13 @@ section {
 #slider {
   color: rgb(255, 255, 255);
 }
-#slider #slider-container {
+
+#slider-container {
   max-width: 79.75rem;
   margin: auto;
 }
-#slider #slider-container #slider-text {
+
+#slider-text {
   max-width: 26.625rem;
   margin: auto;
   display: flex;
@@ -323,28 +325,32 @@ section {
   align-items: center;
   gap: 0.75rem;
 }
-#slider #slider-container #slider-row {
+
+#slider-row {
   max-width: 124.5rem;
   height: 12.5rem;
   margin-top: 1.25rem;
   transition: 0.6s ease;
 }
-#slider #slider-container #slider-row #row-container {
+
+#row-container {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   gap: 1.25rem;
 }
-#slider #slider-container #slider-row #row-container .img-cont {
+
+.img-cont {
   height: 12.5rem;
   max-width: 12.5rem;
 }
-#slider #slider-container #slider-row #row-container .img-cont img {
+.img-cont img {
   height: inherit;
   width: inherit;
   border-radius: 1.25rem;
 }
-#slider #slider-container #slider-buttons {
+
+#slider-buttons {
   margin-top: 1.25rem;
   display: flex;
   flex-flow: row nowrap;
@@ -352,7 +358,8 @@ section {
   align-items: center;
   gap: 1.25rem;
 }
-#slider #slider-container #slider-buttons .slider-button {
+
+.slider-button {
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -363,11 +370,12 @@ section {
   border: 1px solid rgb(255, 255, 255);
   background-color: transparent;
 }
-#slider #slider-container #slider-buttons .slider-button:hover {
+
+.slider-button:hover {
   transition: all 0.6s ease;
   background-color: rgb(255, 255, 255);
 }
-#slider #slider-container #slider-buttons .slider-button:hover svg path {
+.slider-button:hover svg path {
   stroke: rgb(255, 70, 70);
 }
 
