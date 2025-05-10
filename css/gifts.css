@@ -286,7 +286,7 @@ section {
   padding: 0 3.75rem;
 }
 
-#text {
+#about-text {
   padding: 3.75rem 0;
   color: rgb(25, 28, 41);
   width: min(26.625rem, 100%);
@@ -294,7 +294,7 @@ section {
   flex-flow: column nowrap;
   gap: 1.25rem;
 }
-#text .caption {
+#about-text .caption {
   color: rgb(255, 70, 70);
 }
 
