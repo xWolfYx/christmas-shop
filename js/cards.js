@@ -18,42 +18,29 @@ const giftContainer = document.getElementById("cards");
 fetch("../js/gifts.json")
   .then((response) => {
     if (!response.ok) {
-      throw new Error("Failed to fetch: " + response.statusTest);
+      throw new Error("Failed to fetch: " + response.statusText);
     }
     return response.json();
   })
   .then((data) => {
     shuffleCards(data);
-    data.forEach((item) => {
-      const card = document.createElement("div");
-      card.className = "card";
 
-      const cardImage = document.createElement("div");
-      cardImage.className = "card-image";
-
-      const img = document.createElement("img");
-      img.src = categoryImg[item.category];
-      img.alt = item.category;
-      cardImage.appendChild(img);
-
-      card.appendChild(cardImage);
-
-      const cardText = document.createElement("div");
-      cardText.className = "card-text";
-
-      const header4 = document.createElement("h4");
-      header4.className = `header-4 ${item.category
-        .toLowerCase()
-        .replace(" ", "-")}`;
-      header4.textContent = item.category;
-      cardText.appendChild(header4);
-
-      const header3 = document.createElement("h3");
-      header3.className = "header-3";
-      header3.textContent = item.name;
-      cardText.appendChild(header3);
-      card.appendChild(cardText);
-
-      giftContainer.appendChild(card);
-    });
+    const cardsDom = data
+      .map(
+        (item) => `
+      <div class="card">
+        <div class="card-image">
+          <img src="${categoryImg[item.category]}" alt="${item.category}">
+        </div>
+        <div class="card-text">
+          <h4 class="header-4 ${item.category
+            .toLowerCase()
+            .replace(" ", "-")}">${item.category}</h4>
+          <h3 class="header-3">${item.name}</h3>
+        </div>
+      </div>
+      `
+      )
+      .join("");
+    giftContainer.innerHTML = cardsDom;
   });

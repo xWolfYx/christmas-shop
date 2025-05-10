@@ -18,7 +18,7 @@ const giftContainer = document.getElementById("gifts");
 fetch("../js/gifts.json")
   .then((response) => {
     if (!response.ok) {
-      throw new Error("Failed to fetch: " + response.statusTest);
+      throw new Error("Failed to fetch: " + response.statusText);
     }
     return response.json();
   })
@@ -26,8 +26,9 @@ fetch("../js/gifts.json")
     shuffleCards(data);
 
     const fourCards = data.slice(0, 4);
-    fourCards.forEach((item) => {
-      giftContainer.innerHTML += `
+    const cardsDom = fourCards
+      .map(
+        (item) => `
       <div class="card">
         <div class="card-image">
           <img src="${categoryImg[item.category]}" alt="${item.category}">
@@ -39,6 +40,8 @@ fetch("../js/gifts.json")
           <h3 class="header-3">${item.name}</h3>
         </div>
       </div>
-      `;
-    });
+      `
+      )
+      .join("");
+    giftContainer.innerHTML = cardsDom;
   });
