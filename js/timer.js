@@ -26,5 +26,6 @@ function displayCountdown() {
   minutesElem.innerText = remMinutes;
   secondsElem.innerText = remSeconds;
 }
-const countDown = setInterval(countdownTimer, 1000);
+
+setInterval(displayCountdown, 1000);
 displayCountdown();
