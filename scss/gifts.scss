@@ -17,63 +17,63 @@ html {
   background-size: contain;
   background-position: top center;
   border-radius: 1.25rem;
+}
 
-  #marketplace {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    gap: 1.25rem;
+#marketplace {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1.25rem;
+}
 
-    #text {
-      max-width: 426px;
+#text {
+  max-width: 426px;
 
-      text-align: center;
-      color: colors.$static-white;
-    }
+  text-align: center;
+  color: colors.$static-white;
+}
 
-    #tabs {
-      list-style: none;
-      max-width: 474px;
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0.5rem;
+#tabs {
+  list-style: none;
+  max-width: 474px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
 
-      .tab {
-        a {
-          white-space: nowrap;
-          display: block;
-          padding: 0.75rem 1.25rem;
-          border-radius: 0.75rem;
-        }
-
-        a:hover {
-          background-color: colors.$static-white-20;
-        }
-
-        a#gifts-icon-active {
-          color: colors.$static-white;
-          background-color: colors.$static-white-20;
-          pointer-events: none;
-        }
-
-        a {
-          color: colors.$static-white;
-          text-decoration: none;
-        }
-      }
-    }
-
-    #cards {
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, 19.375rem);
-      justify-content: center;
-      align-items: center;
-      gap: 0.75rem;
-    }
+.tab {
+  a {
+    white-space: nowrap;
+    display: block;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.75rem;
   }
+
+  a:hover {
+    background-color: colors.$static-white-20;
+  }
+
+  a#gifts-icon-active {
+    color: colors.$static-white;
+    background-color: colors.$static-white-20;
+    pointer-events: none;
+  }
+
+  a {
+    color: colors.$static-white;
+    text-decoration: none;
+  }
+}
+
+#cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 19.375rem);
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 #socials > div svg path {
