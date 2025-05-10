@@ -682,13 +682,13 @@ section {
   }
 }
 @media screen and (min-width: 380px) and (max-width: 482px) {
-  #main > section > * {
+  section > * {
     width: 100%;
   }
   #about-container {
     overflow: hidden;
   }
-  #about-container #about-text-container {
+  #about-text-container {
     padding: 0 1.25rem;
   }
   .nowrap {
