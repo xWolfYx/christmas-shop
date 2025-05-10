@@ -294,8 +294,7 @@ section {
   flex-flow: column nowrap;
   gap: 1.25rem;
 }
-
-.caption {
+#text .caption {
   color: rgb(255, 70, 70);
 }
 

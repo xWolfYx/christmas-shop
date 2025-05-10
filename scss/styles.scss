@@ -220,10 +220,10 @@ section {
   display: flex;
   flex-flow: column nowrap;
   gap: 1.25rem;
-}
 
-.caption {
-  color: colors.$primary;
+  .caption {
+    color: colors.$primary;
+  }
 }
 
 #image-container {
