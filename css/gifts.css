@@ -794,10 +794,10 @@ div:hover svg path {
 }
 
 @media screen and (max-width: 482px) {
-  #gifts > #marketplace > #tabs {
+  #tabs {
     gap: 0;
   }
-  #gifts > #marketplace > #tabs .tab > a {
+  .tab > a {
     display: block;
     padding: 0.75rem 0.5rem;
     border-radius: 0.75rem;
