@@ -452,14 +452,16 @@ section {
   background-image: url(../images/backgrounds/bg-forest.png), url(../images/backgrounds/bg-snow.png);
   border-radius: 0 0 1.25rem 1.25rem;
 }
-#cta #cta-container {
+
+#cta-container {
   padding: 3.75rem 0;
   border-radius: 1.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#cta #cta-container #cta-block {
+
+#cta-block {
   width: min(26.625rem, 100%);
   padding: 3.75rem 0;
   display: flex;
@@ -470,14 +472,16 @@ section {
   text-align: center;
   color: rgb(255, 255, 255);
 }
-#cta #cta-container #cta-block #cta-box-container {
+
+#cta-box-container {
   display: inherit;
   flex-flow: inherit;
   justify-content: inherit;
   align-items: inherit;
   gap: 0.5rem;
 }
-#cta #cta-container #cta-block #cta-box-container #timer {
+
+#timer {
   max-width: 21.5rem;
   padding: 0.5rem 0.75rem 0.75rem 0.75rem;
   display: grid;
@@ -489,7 +493,7 @@ section {
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 1.25rem;
 }
-#cta #cta-container #cta-block #cta-box-container #timer div {
+#timer div {
   max-width: 5rem;
   display: flex;
   flex-flow: column nowrap;
