@@ -1,5 +1,3 @@
-// gifts
-
 function shuffleCards(array) {
   for (let i = 0; i < array.length - 1; i += 1) {
     const j = Math.floor(Math.random() * array.length);
