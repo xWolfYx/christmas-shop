@@ -696,7 +696,7 @@ section {
   }
 }
 @media (hover: none) {
-  #header > nav > #nav-list > a:hover {
+  #nav-list > a:hover {
     color: rgb(25, 28, 41);
     background-color: transparent;
   }
@@ -704,17 +704,17 @@ section {
     color: rgb(255, 255, 255);
     background-color: rgb(25, 28, 41);
   }
-  #slider > #slider-container > #slider-buttons > .slider-button:hover {
+  .slider-button:hover {
     transition: all 0.6s ease;
     background-color: transparent;
   }
-  #slider > #slider-container > #slider-buttons > .slider-button:hover svg path {
+  .slider-button:hover svg path {
     stroke: rgb(255, 255, 255);
   }
   .card:hover {
     color: rgb(25, 28, 41);
   }
-  #footer > #footer-container > #contacts > div > a:hover {
+  #contacts > div > a:hover {
     color: rgb(25, 28, 41);
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -670,16 +670,17 @@ section {
 }
 
 @media (hover: none) {
-  #header > nav > #nav-list > a:hover {
+  #nav-list > a:hover {
     color: colors.$dark;
     background-color: transparent;
   }
+
   .dark-button:hover {
     color: colors.$static-white;
     background-color: colors.$dark;
   }
 
-  #slider > #slider-container > #slider-buttons > .slider-button:hover {
+  .slider-button:hover {
     transition: all 0.6s ease;
     background-color: transparent;
     svg path {
@@ -691,7 +692,7 @@ section {
     color: colors.$dark;
   }
 
-  #footer > #footer-container > #contacts > div > a:hover {
+  #contacts > div > a:hover {
     color: colors.$dark;
   }
 }
