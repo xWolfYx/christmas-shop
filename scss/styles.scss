@@ -311,64 +311,64 @@ section {
   display: flex;
   flex-flow: column nowrap;
   gap: 1.25rem;
+}
 
-  #gifts-text {
-    text-align: center;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0.75rem;
+#gifts-text {
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
 
-    color: colors.$static-white;
+  color: colors.$static-white;
+}
+
+#gifts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 19.375rem);
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.card {
+  background-color: colors.$content-bg;
+  border-radius: 1.25rem;
+}
+
+.card-image {
+  height: 14.375rem;
+  max-width: 19.375rem;
+
+  img {
+    width: 100%;
   }
+}
 
-  #gifts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 19.375rem);
-    justify-content: center;
-    align-items: center;
-    gap: 0.75rem;
-  }
+.card-text {
+  height: 7rem;
+  max-width: 19.375rem;
 
-  .card {
-    background-color: colors.$content-bg;
-    border-radius: 1.25rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
 
-    .card-image {
-      height: 14.375rem;
-      max-width: 19.375rem;
+  background-color: colors.$static-white;
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+}
 
-      img {
-        width: 100%;
-      }
-    }
+.for-work {
+  color: colors.$tag-purple;
+}
 
-    .card-text {
-      height: 7rem;
-      max-width: 19.375rem;
+.for-health {
+  color: colors.$tag-green;
+}
 
-      display: flex;
-      flex-flow: column nowrap;
-      gap: 0.5rem;
-
-      background-color: colors.$static-white;
-      border-radius: 1.25rem;
-      padding: 1.25rem;
-
-      .for-work {
-        color: colors.$tag-purple;
-      }
-
-      .for-health {
-        color: colors.$tag-green;
-      }
-
-      .for-harmony {
-        color: colors.$tag-pink;
-      }
-    }
-  }
+.for-harmony {
+  color: colors.$tag-pink;
 }
 
 .card {

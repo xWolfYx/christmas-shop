@@ -384,7 +384,8 @@ section {
   flex-flow: column nowrap;
   gap: 1.25rem;
 }
-#gifts-container #gifts-text {
+
+#gifts-text {
   text-align: center;
   display: flex;
   flex-flow: column nowrap;
@@ -393,25 +394,29 @@ section {
   gap: 0.75rem;
   color: rgb(255, 255, 255);
 }
-#gifts-container #gifts {
+
+#gifts {
   display: grid;
   grid-template-columns: repeat(auto-fit, 19.375rem);
   justify-content: center;
   align-items: center;
   gap: 0.75rem;
 }
-#gifts-container .card {
+
+.card {
   background-color: rgb(236, 243, 248);
   border-radius: 1.25rem;
 }
-#gifts-container .card .card-image {
+
+.card-image {
   height: 14.375rem;
   max-width: 19.375rem;
 }
-#gifts-container .card .card-image img {
+.card-image img {
   width: 100%;
 }
-#gifts-container .card .card-text {
+
+.card-text {
   height: 7rem;
   max-width: 19.375rem;
   display: flex;
@@ -421,13 +426,16 @@ section {
   border-radius: 1.25rem;
   padding: 1.25rem;
 }
-#gifts-container .card .card-text .for-work {
+
+.for-work {
   color: rgb(67, 97, 255);
 }
-#gifts-container .card .card-text .for-health {
+
+.for-health {
   color: rgb(6, 164, 79);
 }
-#gifts-container .card .card-text .for-harmony {
+
+.for-harmony {
   color: rgb(255, 67, 247);
 }
 
