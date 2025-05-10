@@ -352,7 +352,7 @@ section {
   align-items: center;
   gap: 1.25rem;
 }
-#slider #slider-container #slider-buttons button {
+#slider #slider-container #slider-buttons .slider-button {
   cursor: pointer;
   display: flex;
   justify-content: center;
