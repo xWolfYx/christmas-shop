@@ -148,7 +148,14 @@ section {
   padding: 0 0.5rem;
   grid-area: header;
 }
-#header #nav {
+
+#header-icon-active {
+  color: rgb(255, 70, 70);
+  background-color: rgba(255, 70, 70, 0.1);
+  pointer-events: none;
+}
+
+#nav {
   max-width: 79.75rem;
   padding: 0.75rem 0;
   margin: 0 auto;
@@ -158,37 +165,40 @@ section {
   justify-content: space-between;
   gap: 0.75rem;
 }
-#header #nav #nav-list {
+#nav li {
+  height: 2.5rem;
+  list-style: none;
+}
+#nav a {
+  text-decoration: none;
+  color: rgb(25, 28, 41);
+}
+
+#nav-list {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
   gap: 0.5rem;
 }
-#header #nav #nav-list a {
+#nav-list a {
   display: block;
   padding: 0.75rem 1.25rem;
   border-radius: 0.75rem;
 }
-#header #nav #nav-list a:hover {
+#nav-list a:hover {
   color: rgb(255, 70, 70);
   background-color: rgba(255, 70, 70, 0.1);
 }
-#header #nav li {
-  height: 2.5rem;
-  list-style: none;
-}
-#header #nav #burger-menu-icon {
+
+#burger-menu-icon {
   display: none;
 }
-#header #nav a {
-  text-decoration: none;
-  color: rgb(25, 28, 41);
-}
-#header #nav #logo {
+
+#logo {
   width: 8.8rem;
 }
-#header #nav #logo a {
+#logo a {
   padding: 0.5rem 1.25rem;
   border-radius: 0.75rem;
   display: flex;
@@ -197,11 +207,12 @@ section {
   justify-content: flex-start;
   gap: 0.5rem;
 }
-#header #nav #logo a img {
+#logo a img {
   width: 1.5rem;
   height: 1.5rem;
 }
-#header #burger-menu {
+
+#burger-menu {
   position: fixed;
   width: 0;
   right: 0;
@@ -210,7 +221,7 @@ section {
   display: flex;
   transition: 0.6s;
 }
-#header #burger-menu ul {
+#burger-menu ul {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -219,19 +230,14 @@ section {
   margin: auto;
   list-style: none;
 }
-#header #burger-menu ul li {
+#burger-menu ul li {
   height: 60px;
   text-align: center;
 }
-#header #burger-menu ul li a {
+#burger-menu ul li a {
   padding: 12px 20px;
   text-decoration: none;
   color: rgb(25, 28, 41);
-}
-#header a#header-icon-active {
-  color: rgb(255, 70, 70);
-  background-color: rgba(255, 70, 70, 0.1);
-  pointer-events: none;
 }
 
 section {
