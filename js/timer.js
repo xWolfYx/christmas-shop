@@ -2,12 +2,11 @@ const daysElem = document.getElementById("days");
 const hoursElem = document.getElementById("hours");
 const minutesElem = document.getElementById("minutes");
 const secondsElem = document.getElementById("seconds");
+const targetDate = new Date(
+  Date.UTC(new Date().getUTCFullYear() + 1, 0, 1, 0, 0, 0)
+);
 
 function displayCountdown() {
-  const targetDate = new Date(
-    Date.UTC(new Date().getUTCFullYear() + 1, 0, 1, 0, 0, 0)
-  );
-
   const currentTime = new Date();
   const difference = targetDate - currentTime;
 
