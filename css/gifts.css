@@ -809,7 +809,7 @@ div:hover svg path {
   }
 }
 @media (hover: none) {
-  #gifts > #marketplace > #tabs > .tab > a:hover {
+  .tab > a:hover {
     background-color: transparent;
   }
 }
