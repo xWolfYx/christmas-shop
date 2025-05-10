@@ -149,12 +149,6 @@ section {
   grid-area: header;
 }
 
-#header-icon-active {
-  color: rgb(255, 70, 70);
-  background-color: rgba(255, 70, 70, 0.1);
-  pointer-events: none;
-}
-
 #nav {
   max-width: 79.75rem;
   padding: 0.75rem 0;
@@ -172,6 +166,11 @@ section {
 #nav a {
   text-decoration: none;
   color: rgb(25, 28, 41);
+}
+#nav #header-icon-active {
+  color: rgb(255, 70, 70);
+  background-color: rgba(255, 70, 70, 0.1);
+  pointer-events: none;
 }
 
 #nav-list {
