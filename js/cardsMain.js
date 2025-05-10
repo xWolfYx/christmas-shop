@@ -11,7 +11,7 @@ const categoryImg = {
   "For Harmony": "../images/gifts/gift-for-harmony.png",
 };
 
-const giftContainer = document.getElementById("gifts");
+const cards = document.getElementById("cards");
 
 fetch("../js/gifts.json")
   .then((response) => {
@@ -41,5 +41,5 @@ fetch("../js/gifts.json")
       `
       )
       .join("");
-    giftContainer.innerHTML = cardsDom;
+    cards.innerHTML = cardsDom;
   });

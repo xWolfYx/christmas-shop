@@ -394,9 +394,10 @@ section {
   color: rgb(255, 255, 255);
 }
 
-#gifts {
+#cards {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 19.375rem);
+  grid-template-columns: repeat(auto-fill, 19.375rem);
   justify-content: center;
   align-items: center;
   gap: 0.75rem;
