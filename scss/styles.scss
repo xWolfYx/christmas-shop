@@ -335,6 +335,16 @@ section {
 .card {
   background-color: colors.$content-bg;
   border-radius: 1.25rem;
+  transition: all 0.6s;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover > .card-text > h3 {
+    transition: 0.6s;
+    color: colors.$primary;
+  }
 }
 
 .card-image {
@@ -347,6 +357,8 @@ section {
 }
 
 .card-text {
+  overflow: hidden;
+
   height: 7rem;
   max-width: 19.375rem;
 
@@ -369,55 +381,6 @@ section {
 
 .for-harmony {
   color: colors.$tag-pink;
-}
-
-.card {
-  background-color: colors.$content-bg;
-  border-radius: 1.25rem;
-  transition: all 0.6s;
-
-  .card-image {
-    height: 14.375rem;
-    max-width: 19.375rem;
-
-    img {
-      width: 100%;
-    }
-  }
-
-  .card-text {
-    overflow: hidden;
-
-    height: 7rem;
-    max-width: 19.375rem;
-
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 0.5rem;
-
-    background-color: colors.$static-white;
-    border-radius: 1.25rem;
-    padding: 1.25rem;
-
-    .for-work {
-      color: colors.$tag-purple;
-    }
-
-    .for-health {
-      color: colors.$tag-green;
-    }
-
-    .for-harmony {
-      color: colors.$tag-pink;
-    }
-  }
-  &:hover {
-    cursor: pointer;
-  }
-  &:hover > .card-text > h3 {
-    transition: 0.6s;
-    color: colors.$primary;
-  }
 }
 
 #cta {

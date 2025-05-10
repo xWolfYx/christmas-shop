@@ -406,6 +406,14 @@ section {
 .card {
   background-color: rgb(236, 243, 248);
   border-radius: 1.25rem;
+  transition: all 0.6s;
+}
+.card:hover {
+  cursor: pointer;
+}
+.card:hover > .card-text > h3 {
+  transition: 0.6s;
+  color: rgb(255, 70, 70);
 }
 
 .card-image {
@@ -417,6 +425,7 @@ section {
 }
 
 .card-text {
+  overflow: hidden;
   height: 7rem;
   max-width: 19.375rem;
   display: flex;
@@ -437,46 +446,6 @@ section {
 
 .for-harmony {
   color: rgb(255, 67, 247);
-}
-
-.card {
-  background-color: rgb(236, 243, 248);
-  border-radius: 1.25rem;
-  transition: all 0.6s;
-}
-.card .card-image {
-  height: 14.375rem;
-  max-width: 19.375rem;
-}
-.card .card-image img {
-  width: 100%;
-}
-.card .card-text {
-  overflow: hidden;
-  height: 7rem;
-  max-width: 19.375rem;
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 0.5rem;
-  background-color: rgb(255, 255, 255);
-  border-radius: 1.25rem;
-  padding: 1.25rem;
-}
-.card .card-text .for-work {
-  color: rgb(67, 97, 255);
-}
-.card .card-text .for-health {
-  color: rgb(6, 164, 79);
-}
-.card .card-text .for-harmony {
-  color: rgb(255, 67, 247);
-}
-.card:hover {
-  cursor: pointer;
-}
-.card:hover > .card-text > h3 {
-  transition: 0.6s;
-  color: rgb(255, 70, 70);
 }
 
 #cta {
