@@ -785,14 +785,6 @@ html {
   gap: 0.75rem;
 }
 
-#socials > div svg path {
-  transition: stroke 0.4s ease;
-}
-
-div:hover svg path {
-  stroke: rgb(255, 70, 70);
-}
-
 @media screen and (max-width: 482px) {
   #tabs {
     gap: 0;
