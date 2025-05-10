@@ -3,7 +3,7 @@ const hoursElem = document.getElementById("hours");
 const minutesElem = document.getElementById("minutes");
 const secondsElem = document.getElementById("seconds");
 
-function countdownTimer() {
+function displayCountdown() {
   const targetDate = new Date(
     Date.UTC(new Date().getUTCFullYear() + 1, 0, 1, 0, 0, 0)
   );
@@ -27,4 +27,4 @@ function countdownTimer() {
   secondsElem.innerText = remSeconds;
 }
 const countDown = setInterval(countdownTimer, 1000);
-countdownTimer();
+displayCountdown();
