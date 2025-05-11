@@ -190,10 +190,6 @@ section {
   background-color: rgba(255, 70, 70, 0.1);
 }
 
-#burger-menu-icon {
-  display: none;
-}
-
 #logo {
   width: 8.8rem;
 }
@@ -209,6 +205,10 @@ section {
 #logo a img {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+#burger-menu-icon {
+  display: none;
 }
 
 #burger-menu {
@@ -237,6 +237,11 @@ section {
   padding: 12px 20px;
   text-decoration: none;
   color: rgb(25, 28, 41);
+}
+
+.burger-menu-open {
+  width: 100% !important;
+  overflow: hidden;
 }
 
 section {

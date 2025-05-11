@@ -17,6 +17,7 @@ window.addEventListener("scroll", toggleScrollButton);
 topScrollButton.addEventListener("click", scrollUp);
 
 function toggleBurgerMenu() {
+  burgerMenu.classList.toggle("burger-menu-open");
   !isBurgerMenuOpen ? openBurgerMenu() : closeBurgerMenu();
   isBurgerMenuOpen = !isBurgerMenuOpen;
 }
@@ -25,13 +26,11 @@ function closeBurgerMenu() {
   burgerFirstLine.classList.remove("close1");
   burgerSecondLine.classList.remove("close2");
   document.body.style.overflow = "visible";
-  burgerMenu.style.width = "0";
 }
 
 function openBurgerMenu() {
   burgerFirstLine.classList.add("close1");
   burgerSecondLine.classList.add("close2");
-  burgerMenu.style.width = "100%";
   document.body.style.overflow = "hidden";
 }
 
