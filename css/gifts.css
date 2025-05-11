@@ -790,11 +790,6 @@ html {
 
 @media screen and (max-width: 482px) {
   #tabs {
-    gap: 0;
-  }
-}
-@media screen and (max-width: 350px) {
-  #tabs {
     flex-direction: column;
   }
 }/*# sourceMappingURL=gifts.css.map */
