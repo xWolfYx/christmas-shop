@@ -410,9 +410,12 @@ section {
 .card:hover {
   cursor: pointer;
 }
-.card:hover > .card-text > h3 {
-  transition: 0.4s;
+.card:hover .header-3 {
   color: rgb(255, 70, 70);
+}
+
+.header-3 {
+  transition: 0.4s;
 }
 
 .card-image {

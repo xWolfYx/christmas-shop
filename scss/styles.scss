@@ -341,11 +341,13 @@ section {
   &:hover {
     cursor: pointer;
   }
-
-  &:hover > .card-text > h3 {
-    transition: 0.4s;
+  &:hover .header-3 {
     color: colors.$primary;
   }
+}
+
+.header-3 {
+  transition: 0.4s;
 }
 
 .card-image {
