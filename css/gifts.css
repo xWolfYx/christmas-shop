@@ -617,7 +617,6 @@ section {
     justify-content: center;
     align-items: center;
     gap: 8px;
-    background-color: transparent;
     border: none;
   }
   #burger-menu-icon * {
