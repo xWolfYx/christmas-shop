@@ -797,11 +797,4 @@ html {
   .tab > a:hover {
     background-color: transparent;
   }
-}
-.card > a:hover {
-  color: rgb(25, 28, 41);
-}
-
-.card:hover {
-  color: rgb(25, 28, 41);
 }/*# sourceMappingURL=gifts.css.map */
