@@ -68,12 +68,6 @@ html {
   #tabs {
     gap: 0;
   }
-
-  .tab > a {
-    display: block;
-    padding: 0.75rem 0.5rem;
-    border-radius: 0.75rem;
-  }
 }
 
 @media screen and (max-width: 350px) {
@@ -83,7 +77,7 @@ html {
 }
 
 @media (hover: none) {
-  .tab > a:hover {
+  .tab {
     background-color: transparent;
   }
 }
