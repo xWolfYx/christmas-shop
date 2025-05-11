@@ -44,27 +44,24 @@ html {
 }
 
 .tab {
-  a {
-    white-space: nowrap;
-    display: block;
-    padding: 0.75rem 1.25rem;
-    border-radius: 0.75rem;
-  }
+  cursor: pointer;
+  white-space: nowrap;
+  display: block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.75rem;
 
-  a:hover {
+  color: colors.$static-white;
+  text-decoration: none;
+
+  &:hover {
     background-color: colors.$static-white-20;
   }
+}
 
-  a#gifts-icon-active {
-    color: colors.$static-white;
-    background-color: colors.$static-white-20;
-    pointer-events: none;
-  }
-
-  a {
-    color: colors.$static-white;
-    text-decoration: none;
-  }
+#gifts-icon-active {
+  color: colors.$static-white;
+  background-color: colors.$static-white-20;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 482px) {
