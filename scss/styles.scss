@@ -642,6 +642,11 @@ section {
   }
 }
 
+.top-btn-display {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
 @media screen and (min-width: 769px) {
   #top-btn {
     display: none;

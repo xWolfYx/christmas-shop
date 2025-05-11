@@ -39,13 +39,11 @@ function toggleScrollButton() {
 }
 
 function showTopButton() {
-  topScrollButton.style.visibility = "visible";
-  topScrollButton.style.opacity = "1";
+  topScrollButton.classList.add("top-btn-display");
 }
 
 function hideTopButton() {
-  topScrollButton.style.visibility = "hidden";
-  topScrollButton.style.opacity = "0";
+  topScrollButton.classList.remove("top-btn-display");
 }
 
 function scrollUp() {
