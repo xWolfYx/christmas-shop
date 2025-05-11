@@ -782,7 +782,7 @@ html {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-#gifts-icon-active {
+.active-filter-btn {
   color: rgb(255, 255, 255);
   background-color: rgba(255, 255, 255, 0.2);
   pointer-events: none;
