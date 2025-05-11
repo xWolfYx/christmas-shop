@@ -44,6 +44,7 @@ html {
 }
 
 .tab {
+  transition: background-color 0.4s;
   cursor: pointer;
   white-space: nowrap;
   display: block;
