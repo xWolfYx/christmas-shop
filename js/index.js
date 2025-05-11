@@ -35,15 +35,9 @@ function openBurgerMenu() {
 }
 
 function toggleScrollButton() {
-  document.documentElement.scrollTop > 300 ? showTopButton() : hideTopButton();
-}
-
-function showTopButton() {
-  topScrollButton.classList.add("top-btn-display");
-}
-
-function hideTopButton() {
-  topScrollButton.classList.remove("top-btn-display");
+  document.documentElement.scrollTop > 300
+    ? topScrollButton.classList.add("top-btn-display")
+    : topScrollButton.classList.remove("top-btn-display");
 }
 
 function scrollUp() {
