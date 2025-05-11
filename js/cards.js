@@ -1,9 +1,9 @@
-function shuffleCards(array) {
-  for (let i = 0; i < array.length - 1; i += 1) {
-    const j = Math.floor(Math.random() * array.length);
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-}
+let allCards = [];
+const cards = document.getElementById("cards");
+const allBtn = document.getElementById("all");
+const forWorkBtn = document.getElementById("for-work");
+const forHealthBtn = document.getElementById("for-health");
+const forHarmonyBtn = document.getElementById("for-harmony");
 
 const categoryImg = {
   "For Work": "../images/gifts/gift-for-work.png",
@@ -11,7 +11,10 @@ const categoryImg = {
   "For Harmony": "../images/gifts/gift-for-harmony.png",
 };
 
-const cards = document.getElementById("cards");
+allBtn.addEventListener("click", () => filterCards("All"));
+forWorkBtn.addEventListener("click", () => filterCards("For Work"));
+forHealthBtn.addEventListener("click", () => filterCards("For Health"));
+forHarmonyBtn.addEventListener("click", () => filterCards("For Harmony"));
 
 fetch("../js/gifts.json")
   .then((response) => {
@@ -22,10 +25,30 @@ fetch("../js/gifts.json")
   })
   .then((data) => {
     shuffleCards(data);
+    allCards = data;
+    renderCards(data);
+  });
 
-    const cardsDom = data
-      .map(
-        (item) => `
+function shuffleCards(array) {
+  for (let i = 0; i < array.length - 1; i += 1) {
+    const j = Math.floor(Math.random() * array.length);
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+function filterCards(category) {
+  if (category === "All") {
+    renderCards(allCards);
+  } else {
+    const filteredCards = allCards.filter((card) => card.category === category);
+    renderCards(filteredCards);
+  }
+}
+
+function renderCards(data) {
+  const cardsDom = data
+    .map(
+      (item) => `
       <div class="card">
         <div class="card-image">
           <img src="${categoryImg[item.category]}" alt="${item.category}">
@@ -38,7 +61,7 @@ fetch("../js/gifts.json")
         </div>
       </div>
       `
-      )
-      .join("");
-    cards.innerHTML = cardsDom;
-  });
+    )
+    .join("");
+  cards.innerHTML = cardsDom;
+}
