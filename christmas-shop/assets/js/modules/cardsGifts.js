@@ -7,9 +7,9 @@ const forHarmonyBtn = document.getElementById("for-harmony");
 const filterBtns = document.querySelectorAll(".tab");
 
 const categoryImg = {
-  "For Work": "../images/gifts/gift-for-work.png",
-  "For Health": "../images/gifts/gift-for-health.png",
-  "For Harmony": "../images/gifts/gift-for-harmony.png",
+  "For Work": "./assets/images/gifts/gift-for-work.png",
+  "For Health": "./assets/images/gifts/gift-for-health.png",
+  "For Harmony": "./assets/images/gifts/gift-for-harmony.png",
 };
 
 allBtn.addEventListener("click", () => filterCards("All"));
@@ -24,7 +24,7 @@ filterBtns.forEach((btn) => {
   });
 });
 
-fetch("../js/gifts.json")
+fetch("./assets/js/gifts.json")
   .then((response) => {
     if (!response.ok) {
       throw new Error("Failed to fetch: " + response.statusText);
