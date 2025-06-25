@@ -335,6 +335,7 @@ section {
   margin-top: 1.25rem;
   transition: 0.4s ease;
   overflow: hidden;
+  scroll-behavior: smooth;
 }
 
 #row-container {
@@ -361,6 +362,11 @@ section {
   justify-content: flex-end;
   align-items: center;
   gap: 1.25rem;
+}
+
+.non-active-slider-button {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 .slider-button {
