@@ -14,11 +14,7 @@ burgerMenuListItems.forEach((item) =>
 function toggleBurgerMenu() {
   isBurgerMenuOpen = !isBurgerMenuOpen;
 
-  if (isBurgerMenuOpen) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "visible";
-  }
+  document.body.style.overflow = isBurgerMenuOpen ? "hidden" : "";
 
   burgerMenu.classList.toggle("burger-menu-open");
   burgerTopLine.classList.toggle("burger-icon-top-close");
