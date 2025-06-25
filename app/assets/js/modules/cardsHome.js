@@ -26,7 +26,7 @@ async function loadGifts() {
 
     const data = await response.json();
     shuffleCards(data);
-    allCards = data;
+    allCards.push(data);
     renderCards(data);
   } catch (error) {
     console.log("Error Loading Gifts", error);
