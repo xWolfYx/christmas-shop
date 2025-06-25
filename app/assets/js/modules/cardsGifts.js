@@ -1,9 +1,5 @@
 let allCards = [];
 const cards = document.getElementById("cards");
-const allBtn = document.getElementById("all");
-const forWorkBtn = document.getElementById("for-work");
-const forHealthBtn = document.getElementById("for-health");
-const forHarmonyBtn = document.getElementById("for-harmony");
 const filterBtns = document.querySelectorAll(".tab");
 
 const categoryImg = {
@@ -12,18 +8,11 @@ const categoryImg = {
   "For Harmony": "./assets/images/gifts/gift-for-harmony.png",
 };
 
-allBtn.addEventListener("click", function () {
-  filterCards(this);
-});
-forWorkBtn.addEventListener("click", function () {
-  filterCards(this);
-});
-forHealthBtn.addEventListener("click", function () {
-  filterCards(this);
-});
-forHarmonyBtn.addEventListener("click", function () {
-  filterCards(this);
-});
+filterBtns.forEach((btn) =>
+  btn.addEventListener("click", function () {
+    filterCards(this);
+  })
+);
 
 filterBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
