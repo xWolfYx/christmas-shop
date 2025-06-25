@@ -12,10 +12,18 @@ const categoryImg = {
   "For Harmony": "./assets/images/gifts/gift-for-harmony.png",
 };
 
-allBtn.addEventListener("click", () => filterCards("All"));
-forWorkBtn.addEventListener("click", () => filterCards("For Work"));
-forHealthBtn.addEventListener("click", () => filterCards("For Health"));
-forHarmonyBtn.addEventListener("click", () => filterCards("For Harmony"));
+allBtn.addEventListener("click", function () {
+  filterCards(this);
+});
+forWorkBtn.addEventListener("click", function () {
+  filterCards(this);
+});
+forHealthBtn.addEventListener("click", function () {
+  filterCards(this);
+});
+forHarmonyBtn.addEventListener("click", function () {
+  filterCards(this);
+});
 
 filterBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -45,10 +53,11 @@ function shuffleCards(array) {
 }
 
 function filterCards(category) {
-  if (category === "All") {
+  const value = category.textContent.trim();
+  if (value === "All") {
     renderCards(allCards);
   } else {
-    const filteredCards = allCards.filter((card) => card.category === category);
+    const filteredCards = allCards.filter((card) => card.category === value);
     renderCards(filteredCards);
   }
 }

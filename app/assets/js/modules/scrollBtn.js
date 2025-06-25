@@ -5,11 +5,11 @@ window.addEventListener("scroll", toggleScrollButton);
 topScrollButton.addEventListener("click", scrollUp);
 
 function toggleScrollButton() {
-  document.documentElement.scrollTop > 300
+  window.scrollY > 300
     ? topScrollButton.classList.add("top-btn-display")
     : topScrollButton.classList.remove("top-btn-display");
 }
 
 function scrollUp() {
-  document.documentElement.scrollTop = 0;
+  window.scrollTo(0, 0);
 }
