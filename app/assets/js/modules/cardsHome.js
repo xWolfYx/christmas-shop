@@ -1,9 +1,4 @@
-function shuffleCards(array) {
-  for (let i = 0; i < array.length - 1; i += 1) {
-    const j = Math.floor(Math.random() * array.length);
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-}
+let allCards = [];
 
 const categoryImg = {
   "For Work": "./assets/images/gifts/gift-for-work.png",
@@ -13,20 +8,35 @@ const categoryImg = {
 
 const cards = document.getElementById("cards");
 
-fetch("./assets/js/gifts.json")
-  .then((response) => {
+loadGifts();
+
+function shuffleCards(array) {
+  for (let i = 0; i < array.length - 1; i += 1) {
+    const j = Math.floor(Math.random() * array.length);
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+async function loadGifts() {
+  try {
+    const response = await fetch("./assets/js/gifts.json");
     if (!response.ok) {
       throw new Error("Failed to fetch: " + response.statusText);
     }
-    return response.json();
-  })
-  .then((data) => {
-    shuffleCards(data);
 
-    const fourCards = data.slice(0, 4);
-    const cardsDom = fourCards
-      .map(
-        (item) => `
+    const data = await response.json();
+    shuffleCards(data);
+    allCards = data;
+    renderCards(data);
+  } catch (error) {
+    console.log("Error Loading Gifts", error);
+  }
+}
+
+function renderCards(data) {
+  const cardsDom = data
+    .map(
+      (item) => `
       <div class="card">
         <div class="card-image">
           <img src="${categoryImg[item.category]}" alt="${item.category}">
@@ -39,7 +49,8 @@ fetch("./assets/js/gifts.json")
         </div>
       </div>
       `
-      )
-      .join("");
-    cards.innerHTML = cardsDom;
-  });
+    )
+    .slice(0, 4)
+    .join("");
+  cards.innerHTML = cardsDom;
+}

@@ -32,18 +32,23 @@ filterBtns.forEach((btn) => {
   });
 });
 
-fetch("./assets/js/gifts.json")
-  .then((response) => {
+loadGifts();
+
+async function loadGifts() {
+  try {
+    const response = await fetch("./assets/js/gifts.json");
     if (!response.ok) {
       throw new Error("Failed to fetch: " + response.statusText);
     }
-    return response.json();
-  })
-  .then((data) => {
+
+    const data = await response.json();
     shuffleCards(data);
     allCards = data;
     renderCards(data);
-  });
+  } catch (error) {
+    console.log("Error Loading Gifts", error);
+  }
+}
 
 function shuffleCards(array) {
   for (let i = 0; i < array.length - 1; i += 1) {
