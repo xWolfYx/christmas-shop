@@ -418,12 +418,32 @@ section {
   background-color: rgb(236, 243, 248);
   border-radius: 1.25rem;
   transition: all 0.4s;
+  display: flex;
+  flex-flow: column nowrap;
 }
 .card:hover {
   cursor: pointer;
 }
 .card:hover .header-3 {
   color: rgb(255, 70, 70);
+}
+
+.card.modal {
+  width: min(95%, 400px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(24, 28, 41, 0.8);
 }
 
 .header-3 {
@@ -438,6 +458,18 @@ section {
   width: 100%;
 }
 
+.card-image.modal {
+  max-width: 400px;
+  overflow: hidden;
+  position: relative;
+}
+.card-image.modal img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .card-text {
   overflow: hidden;
   height: 7rem;
@@ -448,6 +480,17 @@ section {
   background-color: rgb(255, 255, 255);
   border-radius: 1.25rem;
   padding: 1.25rem;
+}
+
+.card-text.modal {
+  min-height: 310px;
+  max-width: 400px;
+}
+
+.superpower {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
 
 .for-work {
