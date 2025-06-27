@@ -1,3 +1,5 @@
+import { showModal } from "./modals.js";
+
 let allCards = [];
 
 const categoryImg = {
@@ -53,4 +55,5 @@ function renderCards(data) {
     .slice(0, 4)
     .join("");
   cards.innerHTML = cardsDom;
+  showModal(data);
 }

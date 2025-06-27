@@ -1,3 +1,5 @@
+import { showModal } from "./modals.js";
+
 let allCards = [];
 const cards = document.getElementById("cards");
 const filterBtns = document.querySelectorAll(".tab");
@@ -75,4 +77,5 @@ function renderCards(data) {
     )
     .join("");
   cards.innerHTML = cardsDom;
+  showModal(data);
 }
