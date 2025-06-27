@@ -369,6 +369,12 @@ section {
   transform: translate(-50%, -50%);
 }
 
+.modal-snowflake {
+  align-self: center;
+  width: 16px;
+  height: 16px;
+}
+
 .modal-background {
   position: fixed;
   top: 50%;
@@ -425,9 +431,15 @@ section {
 }
 
 .superpower {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 60% 15% auto;
+
+  p:nth-child(2) {
+    text-align: center;
+  }
+  img {
+    vertical-align: text-bottom;
+  }
 }
 
 .for-work {
