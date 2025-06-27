@@ -17,16 +17,23 @@ const categoryImg = {
 function openModal(item) {
   const superpowers = Object.entries(item.superpowers);
   let superpowersHtml = "";
-  const snowflakes = 0;
-  console.log(snowflakes);
-  superpowers.forEach(
-    (item) =>
-      (superpowersHtml += `
-      <div class="superpower">
+  superpowers.forEach((item) => {
+    const snowflakesCount = item[1] / 100;
+    console.log(snowflakesCount);
+    let snowflakesHtml = "";
+    for (let i = 0; i < 5; i++) {
+      snowflakesHtml += `<img src="../app/assets/images/icons/snowflake.svg" class="modal-snowflake" style="opacity: ${
+        i < snowflakesCount ? 1 : 0.1
+      }">`;
+    }
+    superpowersHtml += `<div class="superpower">
         <p class="paragraph">${item[0][0].toUpperCase() + item[0].slice(1)}</p>
         <p class="paragraph">${item[1]}</p>
-      </div>`)
-  );
+        <div class="power-value">
+        ${snowflakesHtml}
+        </div>
+      </div>`;
+  });
 
   const modalHtml = `
   <div class="card modal">
@@ -49,12 +56,12 @@ function openModal(item) {
 
   // document.body.innerHTML = modalHtml;
   const modalDiv = document.createElement("div");
-  modalDiv.classList = "modal-background";
+  modalDiv.className = "modal-background";
   modalDiv.innerHTML = modalHtml;
   document.body.append(modalDiv);
   document.body.style.overflow = "hidden";
   modalDiv.addEventListener("click", function () {
-    document.body.style.overflowY = "";
+    document.body.style.overflow = "";
     modalDiv.remove();
   });
 }
