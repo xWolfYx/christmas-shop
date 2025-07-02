@@ -17,6 +17,6 @@ function toggleBurgerMenu() {
   document.body.style.overflow = isBurgerMenuOpen ? "hidden" : "";
 
   burgerMenu.classList.toggle("burger-menu-open");
-  burgerTopLine.classList.toggle("burger-icon-top-close");
-  burgerBottomLine.classList.toggle("burger-icon-bottom-close");
+  burgerTopLine.classList.toggle("top-line-close");
+  burgerBottomLine.classList.toggle("bottom-line-close");
 }
