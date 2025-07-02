@@ -174,7 +174,7 @@ section {
   background-image: url(../../assets/images/backgrounds/bg-snow.png);
   background-size: cover;
   background-position: center;
-  padding: 3.75rem 0.5rem;
+  padding: 3.75rem 0;
   overflow: hidden;
 }
 
@@ -245,7 +245,6 @@ section {
 }
 
 #slider-container {
-  max-width: 79.75rem;
   margin: auto;
 }
 
@@ -265,6 +264,8 @@ section {
   transition: 0.4s ease;
   overflow: hidden;
   scroll-behavior: smooth;
+  padding-left: 82px;
+  padding-right: 82px;
 }
 
 #row-container {
@@ -292,6 +293,7 @@ section {
   justify-content: flex-end;
   align-items: center;
   gap: 1.25rem;
+  padding-right: 82px;
 }
 
 .non-active-slider-button {
@@ -656,6 +658,13 @@ section {
 }
 
 @media screen and (max-width: 986px) {
+  #slider-row {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  #slider-buttons {
+    padding-right: 8px;
+  }
   #contacts {
     flex-direction: column;
   }
