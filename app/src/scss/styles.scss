@@ -364,7 +364,6 @@ section {
 
 .card.modal {
   width: min(95%, 400px);
-
   position: fixed;
   top: 50%;
   left: 50%;
@@ -458,13 +457,14 @@ section {
 }
 
 .card-text.modal {
-  min-height: 310px;
+  height: 100%;
   max-width: 400px;
 }
 
 .superpower {
   display: grid;
-  grid-template-columns: 60% 15% auto;
+  grid-template-columns: 50% auto auto;
+  gap: 8px;
 
   p:nth-child(2) {
     text-align: center;
@@ -472,6 +472,12 @@ section {
   img {
     vertical-align: text-bottom;
   }
+}
+
+.power-value {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 8px;
 }
 
 .for-work {
