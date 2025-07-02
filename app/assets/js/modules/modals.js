@@ -19,7 +19,6 @@ function openModal(item) {
   let superpowersHtml = "";
   superpowers.forEach((item) => {
     const snowflakesCount = item[1] / 100;
-    console.log(snowflakesCount);
     let snowflakesHtml = "";
     for (let i = 0; i < 5; i++) {
       snowflakesHtml += `<img src="../app/assets/images/icons/snowflake.svg" class="modal-snowflake" style="opacity: ${
@@ -37,6 +36,10 @@ function openModal(item) {
 
   const modalHtml = `
   <div class="card modal">
+  <div class="modal-close-icon">
+    <div class="line-top top-line-close"></div>
+    <div class="line-bottom bottom-line-close"></div>
+  </div>
   <div class="card-image modal">
   <img src="${categoryImg[item.category]}" alt="${item.category}">
 </div>
