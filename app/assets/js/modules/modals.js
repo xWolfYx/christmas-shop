@@ -35,27 +35,23 @@ function openModal(item) {
   });
 
   const modalHtml = `
-  <div class="card modal">
+<div class="card modal">
   <div class="modal-close-icon">
     <div class="line-top top-line-close"></div>
     <div class="line-bottom bottom-line-close"></div>
   </div>
   <div class="card-image modal">
-  <img src="${categoryImg[item.category]}" alt="${item.category}">
+    <img src="${categoryImg[item.category]}" alt="${item.category}">
+  </div>
+  <div class="card-text modal">
+    <h4 class="header-4 ${item.category.toLowerCase().replace(" ", "-")}"></h4>
+    <h3 class="header-3">${item.name}</h3>
+    <p class="paragraph">${item.description}</p>
+    <h4 class="header-4">Adds Powers To:</h4>
+    <div class="superpowers">${superpowersHtml}</div>
+  </div>
 </div>
-<div class="card-text modal">
-  <h4 class="header-4 ${item.category.toLowerCase().replace(" ", "-")}">${
-    item.category
-  }</h4>
-  <h3 class="header-3">${item.name}</h3>
-  <p class="paragraph">${item.description}</p>
-  <h4 class="header-4">Adds Powers To:</h4>
-  <div class="superpowers">
-    ${superpowersHtml}
-  </div>
-  </div>
-  </div>
-  </div>`;
+`;
 
   // document.body.innerHTML = modalHtml;
   const modalDiv = document.createElement("div");
