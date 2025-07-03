@@ -528,7 +528,7 @@ section {
 
 .superpower {
   display: grid;
-  grid-template-columns: 50% auto auto;
+  grid-template-columns: 1fr auto auto;
   gap: 8px;
 }
 .superpower p:nth-child(2) {
