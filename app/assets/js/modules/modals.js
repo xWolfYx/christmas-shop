@@ -59,8 +59,18 @@ function openModal(item) {
   modalDiv.innerHTML = modalHtml;
   document.body.append(modalDiv);
   document.body.style.overflow = "hidden";
-  modalDiv.addEventListener("click", function () {
-    document.body.style.overflow = "";
-    modalDiv.remove();
+  modalDiv.addEventListener("click", function (event) {
+    if (event.target === modalDiv) {
+      document.body.style.overflow = "";
+      modalDiv.remove();
+    }
+  });
+
+  const modalCloseIcon = document.querySelector(".modal-close-icon");
+  modalCloseIcon.addEventListener("click", function (event) {
+    if (modalCloseIcon.contains(event.target)) {
+      document.body.style.overflow = "";
+      modalDiv.remove();
+    }
   });
 }
