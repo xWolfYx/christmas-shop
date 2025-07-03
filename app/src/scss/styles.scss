@@ -775,6 +775,9 @@ section {
 }
 
 @media (hover: none) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
   #nav-list > a:hover {
     color: colors.$dark;
     background-color: transparent;

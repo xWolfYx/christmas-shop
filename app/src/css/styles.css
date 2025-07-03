@@ -802,6 +802,9 @@ section {
   }
 }
 @media (hover: none) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
   #nav-list > a:hover {
     color: rgb(25, 28, 41);
     background-color: transparent;
