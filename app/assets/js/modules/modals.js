@@ -53,7 +53,6 @@ function openModal(item) {
 </div>
 `;
 
-  // document.body.innerHTML = modalHtml;
   const modalDiv = document.createElement("div");
   modalDiv.className = "modal-background";
   modalDiv.innerHTML = modalHtml;
