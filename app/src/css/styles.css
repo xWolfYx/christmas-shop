@@ -104,7 +104,7 @@ html {
   color: rgb(255, 255, 255);
   background-color: rgb(25, 28, 41);
   line-height: 3.5rem;
-  width: 14.69rem;
+  width: 14.6875rem;
   height: 3.5rem;
   border: none;
   border-radius: 1.25rem;
@@ -128,7 +128,7 @@ body > * {
 }
 
 #body {
-  max-width: 1440px;
+  max-width: 90rem;
   margin: auto;
   display: grid;
   grid-template-areas: "header" "main" "footer";
@@ -191,7 +191,7 @@ section {
 }
 
 #logo {
-  width: 8.8rem;
+  max-width: 100%;
 }
 #logo a {
   padding: 0.5rem 1.25rem;
@@ -225,16 +225,16 @@ section {
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
-  gap: 8px;
+  gap: 0.5rem;
   margin: auto;
   list-style: none;
 }
 #burger-menu ul li {
-  height: 60px;
+  height: 3.75rem;
   text-align: center;
 }
 #burger-menu ul li a {
-  padding: 12px 20px;
+  padding: 0.75rem 1.25rem;
   text-decoration: none;
   color: rgb(25, 28, 41);
 }
@@ -335,8 +335,8 @@ section {
   transition: 0.4s ease;
   overflow: hidden;
   scroll-behavior: smooth;
-  padding-left: 82px;
-  padding-right: 82px;
+  padding-left: 5.125rem;
+  padding-right: 5.125rem;
 }
 
 #row-container {
@@ -363,7 +363,7 @@ section {
   justify-content: flex-end;
   align-items: center;
   gap: 1.25rem;
-  padding-right: 82px;
+  padding-right: 5.125rem;
 }
 
 .non-active-slider-button {
@@ -379,7 +379,7 @@ section {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 1.25rem;
-  border: 1px solid rgb(255, 255, 255);
+  border: 0.0625rem solid rgb(255, 255, 255);
   background-color: transparent;
 }
 
@@ -431,7 +431,7 @@ section {
 }
 
 .card.modal {
-  width: min(95%, 400px);
+  width: min(95%, 25rem);
   position: fixed;
   top: 50%;
   left: 50%;
@@ -440,39 +440,39 @@ section {
 
 .line-top,
 .line-bottom {
-  width: 20px;
-  height: 1px;
+  width: 1.25rem;
+  height: 0.0625rem;
   background-color: rgb(25, 28, 41);
-  border-radius: 20px;
+  border-radius: 1.25rem;
 }
 
 .top-line-close {
-  transform: translateY(5px) rotate(-45deg);
+  transform: translateY(0.3125rem) rotate(-45deg);
 }
 
 .bottom-line-close {
-  transform: translateY(-4px) rotate(45deg);
+  transform: translateY(-0.25rem) rotate(45deg);
 }
 
 .modal-close-icon {
   position: absolute;
-  right: 12px;
-  top: 12px;
-  width: 40px;
-  height: 40px;
+  right: 0.75rem;
+  top: 0.75rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
-  gap: 8px;
+  gap: 0.5rem;
   border: none;
   z-index: 2;
 }
 
 .modal-snowflake {
   align-self: center;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
 }
 
 .modal-background {
@@ -498,7 +498,7 @@ section {
 }
 
 .card-image.modal {
-  max-width: 400px;
+  max-width: 25rem;
   overflow: hidden;
   position: relative;
 }
@@ -523,13 +523,13 @@ section {
 
 .card-text.modal {
   height: 100%;
-  max-width: 400px;
+  max-width: 25rem;
 }
 
 .superpower {
   display: grid;
   grid-template-columns: 1fr auto auto;
-  gap: 8px;
+  gap: 0.5rem;
 }
 .superpower p:nth-child(2) {
   text-align: center;
@@ -541,7 +541,7 @@ section {
 .power-value {
   display: flex;
   flex-flow: row nowrap;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 .for-work {
@@ -706,30 +706,30 @@ section {
   stroke: rgb(255, 70, 70);
 }
 
-@media screen and (max-width: 986px) {
+@media screen and (max-width: 61.625rem) {
   #slider-row {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
   #slider-buttons {
-    padding-right: 8px;
+    padding-right: 0.5rem;
   }
   #contacts {
     flex-direction: column;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 48rem) {
   #nav-list {
     display: none;
   }
   #burger-menu-icon {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
-    gap: 8px;
+    gap: 0.5rem;
     border: none;
   }
   #burger-menu-icon * {
@@ -752,14 +752,14 @@ section {
   #top-btn {
     visibility: hidden;
     opacity: 0;
-    width: 56px;
-    height: 56px;
+    width: 3.5rem;
+    height: 3.5rem;
     background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(255, 70, 70);
+    border: 0.0625rem solid rgb(255, 70, 70);
     border-radius: 50%;
     position: fixed;
     right: 8vw;
-    bottom: 123px;
+    bottom: 7.6875rem;
     transition: 0.4s;
   }
   #top-btn svg {
@@ -774,12 +774,12 @@ section {
   opacity: 1 !important;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 48.0625rem) {
   #top-btn {
     display: none;
   }
 }
-@media screen and (max-width: 665px) {
+@media screen and (max-width: 41.5625rem) {
   #about-container {
     flex-flow: column nowrap;
   }
@@ -787,7 +787,7 @@ section {
     width: 100%;
   }
 }
-@media screen and (min-width: 380px) and (max-width: 482px) {
+@media screen and (min-width: 23.75rem) and (max-width: 30.125rem) {
   section > * {
     width: 100%;
   }

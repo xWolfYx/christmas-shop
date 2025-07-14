@@ -2,6 +2,7 @@
 @use "fonts";
 @use "colors";
 @use "text";
+@use "math";
 
 a {
   transition: 0.4s ease;
@@ -16,18 +17,18 @@ html {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top center;
-  border-radius: 1.25rem;
+  border-radius: math.rem(20);
 }
 
 #marketplace {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  gap: 1.25rem;
+  gap: math.rem(20);
 }
 
 #text {
-  max-width: 426px;
+  max-width: math.rem(426);
 
   text-align: center;
   color: colors.$static-white;
@@ -35,12 +36,12 @@ html {
 
 #tabs {
   list-style: none;
-  max-width: 474px;
+  max-width: math.rem(474);
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
+  gap: math.rem(8);
 }
 
 .tab {
@@ -48,8 +49,8 @@ html {
   cursor: pointer;
   white-space: nowrap;
   display: block;
-  padding: 0.75rem 1.25rem;
-  border-radius: 0.75rem;
+  padding: math.rem(12) math.rem(20);
+  border-radius: math.rem(12);
 
   color: colors.$static-white;
   text-decoration: none;
@@ -65,7 +66,7 @@ html {
   pointer-events: none;
 }
 
-@media screen and (max-width: 482px) {
+@media screen and (max-width: math.rem(482)) {
   #tabs {
     flex-direction: column;
   }

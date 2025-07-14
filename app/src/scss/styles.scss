@@ -1,6 +1,7 @@
 @use "fonts";
 @use "colors";
 @use "text";
+@use "math";
 
 @mixin flex-center {
   display: flex;
@@ -24,11 +25,11 @@ html {
 .dark-button {
   color: colors.$static-white;
   background-color: colors.$dark;
-  line-height: 3.5rem;
-  width: 14.69rem;
-  height: 3.5rem;
+  line-height: math.rem(56);
+  width: math.rem(235);
+  height: math.rem(56);
   border: none;
-  border-radius: 1.25rem;
+  border-radius: math.rem(20);
   cursor: pointer;
   text-decoration: none;
 }
@@ -49,7 +50,7 @@ body > * {
 }
 
 #body {
-  max-width: 1440px;
+  max-width: math.rem(1440);
   margin: auto;
   display: grid;
   grid-template-areas:
@@ -60,7 +61,7 @@ body > * {
 
 #header,
 #main {
-  width: min(90rem, 100%);
+  width: min(math.rem(1440), 100%);
   overflow: hidden;
 }
 
@@ -69,22 +70,22 @@ section {
 }
 
 #header {
-  padding: 0 0.5rem;
+  padding: 0 math.rem(8);
   grid-area: header;
 }
 
 #nav {
-  max-width: 79.75rem;
-  padding: 0.75rem 0;
+  max-width: math.rem(1276);
+  padding: math.rem(12) 0;
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
+  gap: math.rem(12);
 
   li {
-    height: 2.5rem;
+    height: math.rem(40);
     list-style: none;
   }
 
@@ -105,12 +106,12 @@ section {
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
-  gap: 0.5rem;
+  gap: math.rem(8);
 
   a {
     display: block;
-    padding: 0.75rem 1.25rem;
-    border-radius: 0.75rem;
+    padding: math.rem(12) math.rem(20);
+    border-radius: math.rem(12);
   }
 
   a:hover {
@@ -120,20 +121,20 @@ section {
 }
 
 #logo {
-  width: 8.8rem;
+  max-width: 100%;
 
   a {
-    padding: 0.5rem 1.25rem;
-    border-radius: 0.75rem;
+    padding: math.rem(8) math.rem(20);
+    border-radius: math.rem(12);
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-start;
-    gap: 0.5rem;
+    gap: math.rem(8);
 
     img {
-      width: 1.5rem;
-      height: 1.5rem;
+      width: math.rem(24);
+      height: math.rem(24);
     }
   }
 }
@@ -153,14 +154,14 @@ section {
   ul {
     @include flex-center;
     flex-flow: column nowrap;
-    gap: 8px;
+    gap: math.rem(8);
     margin: auto;
     list-style: none;
     li {
-      height: 60px;
+      height: math.rem(60);
       text-align: center;
       a {
-        padding: 12px 20px;
+        padding: math.rem(12) math.rem(20);
         text-decoration: none;
         color: colors.$dark;
       }
@@ -178,7 +179,7 @@ section {
   background-image: url(../../assets/images/backgrounds/bg-snow.png);
   background-size: cover;
   background-position: center;
-  padding: 3.75rem 0;
+  padding: math.rem(60) 0;
   overflow: hidden;
 }
 
@@ -188,7 +189,7 @@ section {
   background-size: cover, cover;
   background-position: center, center;
   background-repeat: no-repeat;
-  border-radius: 1.25rem 1.25rem 0 0;
+  border-radius: math.rem(20) math.rem(20) 0 0;
 }
 
 #hero-container {
@@ -197,36 +198,36 @@ section {
   margin: auto;
   flex-flow: column wrap;
   text-align: center;
-  gap: 0.75rem;
+  gap: math.rem(12);
 
-  padding: 3.75rem 0;
-  max-width: 26.625rem;
+  padding: math.rem(60) 0;
+  max-width: math.rem(426);
 }
 
 #about-container {
-  max-width: 79.75rem;
+  max-width: math.rem(1276);
   margin: auto;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-  border-radius: 1.25rem;
+  border-radius: math.rem(20);
   background-color: colors.$static-white;
 }
 
 #about-text-container {
   margin: 0;
-  padding: 0 3.75rem;
+  padding: 0 math.rem(60);
 }
 
 #about-text {
-  padding: 3.75rem 0;
+  padding: math.rem(60) 0;
   color: colors.$dark;
-  width: min(26.625rem, 100%);
+  width: min(math.rem(426), 100%);
 
   display: flex;
   flex-flow: column nowrap;
-  gap: 1.25rem;
+  gap: math.rem(20);
 
   .caption {
     color: colors.$primary;
@@ -235,11 +236,11 @@ section {
 
 #image-container {
   min-width: 50%;
-  height: 33rem;
+  height: math.rem(528);
   background-image: url(../../assets/images/main-page-images/santa.png);
   background-size: cover;
   background-position: center;
-  border-radius: 1.25rem;
+  border-radius: math.rem(20);
 }
 
 #slider {
@@ -251,51 +252,51 @@ section {
 }
 
 #slider-text {
-  max-width: 26.625rem;
+  max-width: math.rem(426);
   margin: auto;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  gap: 0.75rem;
+  gap: math.rem(12);
 }
 
 #slider-row {
-  max-width: 124.5rem;
-  height: 12.5rem;
-  margin-top: 1.25rem;
+  max-width: math.rem(1992);
+  height: math.rem(200);
+  margin-top: math.rem(20);
   transition: 0.4s ease;
   overflow: hidden;
   scroll-behavior: smooth;
-  padding-left: 82px;
-  padding-right: 82px;
+  padding-left: math.rem(82);
+  padding-right: math.rem(82);
 }
 
 #row-container {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  gap: 1.25rem;
+  gap: math.rem(20);
 }
 
 .img-cont {
-  height: 12.5rem;
-  max-width: 12.5rem;
+  height: math.rem(200);
+  max-width: math.rem(200);
 
   img {
     height: inherit;
     width: inherit;
-    border-radius: 1.25rem;
+    border-radius: math.rem(20);
   }
 }
 
 #slider-buttons {
-  margin-top: 1.25rem;
+  margin-top: math.rem(20);
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
-  gap: 1.25rem;
-  padding-right: 82px;
+  gap: math.rem(20);
+  padding-right: math.rem(82);
 }
 
 .non-active-slider-button {
@@ -306,10 +307,10 @@ section {
 .slider-button {
   @include flex-center;
   cursor: pointer;
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 1.25rem;
-  border: 1px solid colors.$static-white;
+  width: math.rem(56);
+  height: math.rem(56);
+  border-radius: math.rem(20);
+  border: math.rem(1) solid colors.$static-white;
   background-color: transparent;
 }
 
@@ -324,14 +325,14 @@ section {
 #gifts-container {
   display: flex;
   flex-flow: column nowrap;
-  gap: 1.25rem;
+  gap: math.rem(20);
 }
 
 #gifts-text {
   @include flex-center;
   text-align: center;
   flex-flow: column nowrap;
-  gap: 0.75rem;
+  gap: math.rem(12);
 
   color: colors.$static-white;
 }
@@ -339,15 +340,15 @@ section {
 #cards {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 19.375rem);
+  grid-template-columns: repeat(auto-fill, math.rem(310));
   justify-content: center;
   align-items: center;
-  gap: 0.75rem;
+  gap: math.rem(12);
 }
 
 .card {
   background-color: colors.$content-bg;
-  border-radius: 1.25rem;
+  border-radius: math.rem(20);
   transition: all 0.4s;
   display: flex;
   flex-flow: column nowrap;
@@ -361,7 +362,7 @@ section {
 }
 
 .card.modal {
-  width: min(95%, 400px);
+  width: min(95%, math.rem(400));
   position: fixed;
   top: 50%;
   left: 50%;
@@ -370,37 +371,37 @@ section {
 
 .line-top,
 .line-bottom {
-  width: 20px;
-  height: 1px;
+  width: math.rem(20);
+  height: math.rem(1);
   background-color: colors.$dark;
-  border-radius: 20px;
+  border-radius: math.rem(20);
 }
 
 .top-line-close {
-  transform: translateY(5px) rotate(-45deg);
+  transform: translateY(math.rem(5)) rotate(-45deg);
 }
 
 .bottom-line-close {
-  transform: translateY(-4px) rotate(45deg);
+  transform: translateY(math.rem(-4)) rotate(45deg);
 }
 
 .modal-close-icon {
   position: absolute;
-  right: 12px;
-  top: 12px;
-  width: 40px;
-  height: 40px;
+  right: math.rem(12);
+  top: math.rem(12);
+  width: math.rem(40);
+  height: math.rem(40);
   @include flex-center;
   flex-flow: column nowrap;
-  gap: 8px;
+  gap: math.rem(8);
   border: none;
   z-index: 2;
 }
 
 .modal-snowflake {
   align-self: center;
-  width: 16px;
-  height: 16px;
+  width: math.rem(16);
+  height: math.rem(16);
 }
 
 .modal-background {
@@ -418,8 +419,8 @@ section {
 }
 
 .card-image {
-  height: 14.375rem;
-  max-width: 19.375rem;
+  height: math.rem(230);
+  max-width: math.rem(310);
 
   img {
     width: 100%;
@@ -427,7 +428,7 @@ section {
 }
 
 .card-image.modal {
-  max-width: 400px;
+  max-width: math.rem(400);
   overflow: hidden;
   position: relative;
   img {
@@ -441,27 +442,27 @@ section {
 .card-text {
   overflow: hidden;
 
-  height: 7rem;
-  max-width: 19.375rem;
+  height: math.rem(112);
+  max-width: math.rem(310);
 
   display: flex;
   flex-flow: column nowrap;
-  gap: 0.5rem;
+  gap: math.rem(8);
 
   background-color: colors.$static-white;
-  border-radius: 1.25rem;
-  padding: 1.25rem;
+  border-radius: math.rem(20);
+  padding: math.rem(20);
 }
 
 .card-text.modal {
   height: 100%;
-  max-width: 400px;
+  max-width: math.rem(400);
 }
 
 .superpower {
   display: grid;
   grid-template-columns: 1fr auto auto;
-  gap: 8px;
+  gap: math.rem(8);
 
   p:nth-child(2) {
     text-align: center;
@@ -474,7 +475,7 @@ section {
 .power-value {
   display: flex;
   flex-flow: row nowrap;
-  gap: 8px;
+  gap: math.rem(8);
 }
 
 .for-work {
@@ -492,23 +493,23 @@ section {
 #cta {
   background-image: url(../../assets/images/backgrounds/bg-forest.png),
     url(../../assets/images/backgrounds/bg-snow.png);
-  border-radius: 0 0 1.25rem 1.25rem;
+  border-radius: 0 0 math.rem(20) math.rem(20);
 }
 
 #cta-container {
-  padding: 3.75rem 0;
-  border-radius: 1.25rem;
+  padding: math.rem(60) 0;
+  border-radius: math.rem(20);
 
   @include flex-center;
 }
 
 #cta-block {
-  width: min(26.625rem, 100%);
-  padding: 3.75rem 0;
+  width: min(math.rem(426), 100%);
+  padding: math.rem(60) 0;
 
   @include flex-center;
   flex-flow: column nowrap;
-  gap: 1.25rem;
+  gap: math.rem(20);
 
   text-align: center;
   color: colors.$static-white;
@@ -519,33 +520,33 @@ section {
   flex-flow: inherit;
   justify-content: inherit;
   align-items: inherit;
-  gap: 0.5rem;
+  gap: math.rem(8);
 }
 
 #timer {
-  max-width: 21.5rem;
-  padding: 0.5rem 0.75rem 0.75rem 0.75rem;
+  max-width: math.rem(344);
+  padding: math.rem(8) math.rem(12) math.rem(12) math.rem(12);
 
   display: grid;
-  grid-template-columns: repeat(4, 5rem 0);
+  grid-template-columns: repeat(4, math.rem(80) 0);
   grid-template-rows: auto;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 
   background-color: colors.$static-white-40;
-  border-radius: 1.25rem;
+  border-radius: math.rem(20);
 
   div {
-    max-width: 5rem;
+    max-width: math.rem(80);
     @include flex-center;
     flex-flow: column nowrap;
   }
 }
 
 #footer {
-  width: min(100%, 90rem);
-  padding: 3.75rem 0.5rem;
+  width: min(100%, math.rem(1440));
+  padding: math.rem(60) math.rem(8);
 }
 
 #footer-container {
@@ -553,7 +554,7 @@ section {
   width: 90%;
   display: flex;
   flex-flow: column nowrap;
-  gap: 3.75rem;
+  gap: math.rem(60);
   align-content: space-between;
 }
 
@@ -561,7 +562,7 @@ section {
   display: flex;
   flex-flow: row;
   justify-content: center;
-  gap: 0.75rem;
+  gap: math.rem(12);
 
   div {
     background-color: colors.$content-bg;
@@ -570,7 +571,7 @@ section {
     flex: 1;
     flex-flow: row nowrap;
     justify-content: center;
-    border-radius: 1.25rem;
+    border-radius: math.rem(20);
 
     a {
       text-decoration: none;
@@ -586,15 +587,15 @@ section {
     }
 
     div {
-      padding: 1.25rem;
+      padding: math.rem(20);
 
       @include flex-center;
       flex-flow: column nowrap;
-      gap: 0.75rem;
+      gap: math.rem(12);
 
       img {
-        width: 5rem;
-        height: 5rem;
+        width: math.rem(80);
+        height: math.rem(80);
       }
     }
   }
@@ -604,7 +605,7 @@ section {
   @include flex-center;
   flex-flow: column;
   align-self: center;
-  gap: 0.75rem;
+  gap: math.rem(12);
 
   a {
     color: colors.$dark;
@@ -617,20 +618,20 @@ section {
 }
 
 #socials {
-  max-width: 12.25rem;
+  max-width: math.rem(196);
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  gap: 0.75rem;
+  gap: math.rem(12);
 
   div {
     @include flex-center;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: math.rem(40);
+    height: math.rem(40);
 
     a {
-      padding: 0.5rem;
+      padding: math.rem(8);
       @include flex-center;
       width: 100%;
       height: 100%;
@@ -646,30 +647,30 @@ section {
   }
 }
 
-@media screen and (max-width: 986px) {
+@media screen and (max-width: math.rem(986)) {
   #slider-row {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: math.rem(8);
+    padding-right: math.rem(8);
   }
   #slider-buttons {
-    padding-right: 8px;
+    padding-right: math.rem(8);
   }
   #contacts {
     flex-direction: column;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: math.rem(768)) {
   #nav-list {
     display: none;
   }
 
   #burger-menu-icon {
-    width: 40px;
-    height: 40px;
+    width: math.rem(40);
+    height: math.rem(40);
     @include flex-center;
     flex-flow: column nowrap;
-    gap: 8px;
+    gap: math.rem(8);
     border: none;
     * {
       transition: 0.4s;
@@ -678,7 +679,7 @@ section {
 
   #footer {
     width: 100%;
-    padding: 3.75rem 0.5rem;
+    padding: math.rem(60) math.rem(8);
   }
 
   #footer-container {
@@ -689,21 +690,21 @@ section {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    gap: 0.75rem;
+    gap: math.rem(12);
     width: 100%;
   }
 
   #top-btn {
     visibility: hidden;
     opacity: 0;
-    width: 56px;
-    height: 56px;
+    width: math.rem(56);
+    height: math.rem(56);
     background-color: colors.$static-white;
-    border: 1px solid colors.$primary;
+    border: math.rem(1) solid colors.$primary;
     border-radius: 50%;
     position: fixed;
     right: 8vw;
-    bottom: 123px;
+    bottom: math.rem(123);
     transition: 0.4s;
 
     svg {
@@ -720,13 +721,13 @@ section {
   opacity: 1 !important;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: math.rem(769)) {
   #top-btn {
     display: none;
   }
 }
 
-@media screen and (max-width: 665px) {
+@media screen and (max-width: math.rem(665)) {
   #about-container {
     flex-flow: column nowrap;
   }
@@ -736,7 +737,7 @@ section {
   }
 }
 
-@media screen and (min-width: 380px) and (max-width: 482px) {
+@media screen and (min-width: math.rem(380)) and (max-width: math.rem(482)) {
   section > * {
     width: 100%;
   }
@@ -746,7 +747,7 @@ section {
   }
 
   #about-text-container {
-    padding: 0 1.25rem;
+    padding: 0 math.rem(20);
   }
 
   .nowrap {
