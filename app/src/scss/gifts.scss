@@ -3,6 +3,7 @@
 @use "colors";
 @use "text";
 @use "math";
+@use "mixins";
 
 a {
   transition: 0.4s ease;
@@ -37,8 +38,7 @@ html {
 #tabs {
   list-style: none;
   max-width: math.rem(474);
-  display: flex;
-  flex-flow: row nowrap;
+  @include mixins.flex-row;
   justify-content: space-between;
   align-items: center;
   gap: math.rem(8);

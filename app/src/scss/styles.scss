@@ -2,12 +2,7 @@
 @use "colors";
 @use "text";
 @use "math";
-
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+@use "mixins";
 
 .nowrap {
   white-space: nowrap;
@@ -102,8 +97,7 @@ section {
 }
 
 #nav-list {
-  display: flex;
-  flex-flow: row nowrap;
+  @include mixins.flex-row;
   justify-content: flex-end;
   align-items: center;
   gap: math.rem(8);
@@ -126,8 +120,7 @@ section {
   a {
     padding: math.rem(8) math.rem(20);
     border-radius: math.rem(12);
-    display: flex;
-    flex-flow: row nowrap;
+    @include mixins.flex-row;
     align-items: center;
     justify-content: flex-start;
     gap: math.rem(8);
@@ -152,8 +145,8 @@ section {
   display: flex;
   transition: 0.4s;
   ul {
-    @include flex-center;
-    flex-flow: column nowrap;
+    @include mixins.flex-center;
+    @include mixins.flex-column;
     gap: math.rem(8);
     margin: auto;
     list-style: none;
@@ -193,7 +186,7 @@ section {
 }
 
 #hero-container {
-  @include flex-center;
+  @include mixins.flex-center;
   color: colors.$static-white;
   margin: auto;
   flex-flow: column wrap;
@@ -207,8 +200,7 @@ section {
 #about-container {
   max-width: math.rem(1276);
   margin: auto;
-  display: flex;
-  flex-flow: row nowrap;
+  @include mixins.flex-row();
   align-items: center;
   justify-content: space-between;
   border-radius: math.rem(20);
@@ -225,8 +217,7 @@ section {
   color: colors.$dark;
   width: min(math.rem(426), 100%);
 
-  display: flex;
-  flex-flow: column nowrap;
+  @include mixins.flex-column;
   gap: math.rem(20);
 
   .caption {
@@ -254,8 +245,7 @@ section {
 #slider-text {
   max-width: math.rem(426);
   margin: auto;
-  display: flex;
-  flex-flow: column nowrap;
+  @include mixins.flex-column;
   align-items: center;
   gap: math.rem(12);
 }
@@ -272,8 +262,7 @@ section {
 }
 
 #row-container {
-  display: flex;
-  flex-flow: row nowrap;
+  @include mixins.flex-row;
   align-items: center;
   gap: math.rem(20);
 }
@@ -291,8 +280,7 @@ section {
 
 #slider-buttons {
   margin-top: math.rem(20);
-  display: flex;
-  flex-flow: row nowrap;
+  @include mixins.flex-row;
   justify-content: flex-end;
   align-items: center;
   gap: math.rem(20);
@@ -305,7 +293,7 @@ section {
 }
 
 .slider-button {
-  @include flex-center;
+  @include mixins.flex-center;
   cursor: pointer;
   width: math.rem(56);
   height: math.rem(56);
@@ -323,15 +311,14 @@ section {
 }
 
 #gifts-container {
-  display: flex;
-  flex-flow: column nowrap;
+  @include mixins.flex-column;
   gap: math.rem(20);
 }
 
 #gifts-text {
-  @include flex-center;
+  @include mixins.flex-center;
+  @include mixins.flex-column;
   text-align: center;
-  flex-flow: column nowrap;
   gap: math.rem(12);
 
   color: colors.$static-white;
@@ -350,8 +337,7 @@ section {
   background-color: colors.$content-bg;
   border-radius: math.rem(20);
   transition: all 0.4s;
-  display: flex;
-  flex-flow: column nowrap;
+  @include mixins.flex-column;
 
   &:hover {
     cursor: pointer;
@@ -391,8 +377,8 @@ section {
   top: math.rem(12);
   width: math.rem(40);
   height: math.rem(40);
-  @include flex-center;
-  flex-flow: column nowrap;
+  @include mixins.flex-center;
+  @include mixins.flex-column;
   gap: math.rem(8);
   border: none;
   z-index: 2;
@@ -445,8 +431,7 @@ section {
   height: math.rem(112);
   max-width: math.rem(310);
 
-  display: flex;
-  flex-flow: column nowrap;
+  @include mixins.flex-column;
   gap: math.rem(8);
 
   background-color: colors.$static-white;
@@ -473,8 +458,7 @@ section {
 }
 
 .power-value {
-  display: flex;
-  flex-flow: row nowrap;
+  @include mixins.flex-row;
   gap: math.rem(8);
 }
 
@@ -500,15 +484,15 @@ section {
   padding: math.rem(60) 0;
   border-radius: math.rem(20);
 
-  @include flex-center;
+  @include mixins.flex-center;
 }
 
 #cta-block {
   width: min(math.rem(426), 100%);
   padding: math.rem(60) 0;
 
-  @include flex-center;
-  flex-flow: column nowrap;
+  @include mixins.flex-center;
+  @include mixins.flex-column;
   gap: math.rem(20);
 
   text-align: center;
@@ -530,7 +514,6 @@ section {
   display: grid;
   grid-template-columns: repeat(4, math.rem(80) 0);
   grid-template-rows: auto;
-  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
 
@@ -539,8 +522,8 @@ section {
 
   div {
     max-width: math.rem(80);
-    @include flex-center;
-    flex-flow: column nowrap;
+    @include mixins.flex-center;
+    @include mixins.flex-column;
   }
 }
 
@@ -552,8 +535,7 @@ section {
 #footer-container {
   margin: auto;
   width: 90%;
-  display: flex;
-  flex-flow: column nowrap;
+  @include mixins.flex-column;
   gap: math.rem(60);
   align-content: space-between;
 }
@@ -567,9 +549,8 @@ section {
   div {
     background-color: colors.$content-bg;
 
-    display: flex;
+    @include mixins.flex-row;
     flex: 1;
-    flex-flow: row nowrap;
     justify-content: center;
     border-radius: math.rem(20);
 
@@ -589,8 +570,8 @@ section {
     div {
       padding: math.rem(20);
 
-      @include flex-center;
-      flex-flow: column nowrap;
+      @include mixins.flex-center;
+      @include mixins.flex-column;
       gap: math.rem(12);
 
       img {
@@ -602,7 +583,7 @@ section {
 }
 
 #socials-container {
-  @include flex-center;
+  @include mixins.flex-center;
   flex-flow: column;
   align-self: center;
   gap: math.rem(12);
@@ -619,20 +600,19 @@ section {
 
 #socials {
   max-width: math.rem(196);
-  display: flex;
-  flex-flow: row nowrap;
+  @include mixins.flex-row;
   justify-content: space-between;
   align-items: center;
   gap: math.rem(12);
 
   div {
-    @include flex-center;
+    @include mixins.flex-center;
     width: math.rem(40);
     height: math.rem(40);
 
     a {
       padding: math.rem(8);
-      @include flex-center;
+      @include mixins.flex-center;
       width: 100%;
       height: 100%;
     }
@@ -668,8 +648,8 @@ section {
   #burger-menu-icon {
     width: math.rem(40);
     height: math.rem(40);
-    @include flex-center;
-    flex-flow: column nowrap;
+    @include mixins.flex-center;
+    @include mixins.flex-column;
     gap: math.rem(8);
     border: none;
     * {
@@ -729,7 +709,7 @@ section {
 
 @media screen and (max-width: math.rem(665)) {
   #about-container {
-    flex-flow: column nowrap;
+    @include mixins.flex-column;
   }
 
   #image-container {

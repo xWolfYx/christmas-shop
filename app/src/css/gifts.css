@@ -224,6 +224,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
   flex-flow: column nowrap;
   gap: 0.5rem;
   margin: auto;
@@ -401,8 +402,9 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  display: flex;
   flex-flow: column nowrap;
+  text-align: center;
   gap: 0.75rem;
   color: rgb(255, 255, 255);
 }
@@ -463,6 +465,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
   flex-flow: column nowrap;
   gap: 0.5rem;
   border: none;
@@ -575,6 +578,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
   flex-flow: column nowrap;
   gap: 1.25rem;
   text-align: center;
@@ -595,7 +599,6 @@ section {
   display: grid;
   grid-template-columns: repeat(4, 5rem 0);
   grid-template-rows: auto;
-  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.4);
@@ -606,6 +609,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
   flex-flow: column nowrap;
 }
 
@@ -632,8 +636,8 @@ section {
 #contacts div {
   background-color: rgb(236, 243, 248);
   display: flex;
-  flex: 1;
   flex-flow: row nowrap;
+  flex: 1;
   justify-content: center;
   border-radius: 1.25rem;
 }
@@ -652,6 +656,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
   flex-flow: column nowrap;
   gap: 0.75rem;
 }
@@ -728,6 +733,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    display: flex;
     flex-flow: column nowrap;
     gap: 0.5rem;
     border: none;
@@ -781,6 +787,7 @@ section {
 }
 @media screen and (max-width: 41.5625rem) {
   #about-container {
+    display: flex;
     flex-flow: column nowrap;
   }
   #image-container {
