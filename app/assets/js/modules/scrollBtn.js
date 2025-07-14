@@ -1,15 +1,17 @@
 const topScrollButton = document.getElementById("top-btn");
+const SCROLL_THRESHOLD = 300;
 
 window.addEventListener("scroll", toggleScrollButton);
 
 topScrollButton.addEventListener("click", scrollUp);
 
 function toggleScrollButton() {
-  window.scrollY > 300
-    ? topScrollButton.classList.add("top-btn-display")
-    : topScrollButton.classList.remove("top-btn-display");
+  topScrollButton.classList.toggle(
+    "top-btn-display",
+    window.scrollY > SCROLL_THRESHOLD
+  );
 }
 
 function scrollUp() {
-  window.scrollTo(0, 0);
+  window.scrollTo(pageXOffset, 0);
 }
