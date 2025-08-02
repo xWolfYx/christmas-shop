@@ -12,6 +12,9 @@ burgerMenuListItems.forEach((item) =>
 );
 
 function toggleBurgerMenu() {
+  if (window.pageYOffset > 0) {
+    window.scrollTo(pageXOffset, 0);
+  }
   isBurgerMenuOpen = !isBurgerMenuOpen;
 
   document.body.style.overflow = isBurgerMenuOpen ? "hidden" : "";
