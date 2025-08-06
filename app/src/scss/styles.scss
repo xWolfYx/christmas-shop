@@ -56,12 +56,8 @@ body > * {
 
 #header,
 #main {
-  width: min(math.rem(1440), 100%);
+  width: clamp(300px, 100%, math.rem(1440));
   overflow: hidden;
-}
-
-section {
-  width: 100%;
 }
 
 #header {

@@ -136,12 +136,8 @@ body > * {
 
 #header,
 #main {
-  width: min(90rem, 100%);
+  width: clamp(300px, 100%, 90rem);
   overflow: hidden;
-}
-
-section {
-  width: 100%;
 }
 
 #header {
