@@ -4,10 +4,6 @@
 @use "math";
 @use "mixins";
 
-.nowrap {
-  white-space: nowrap;
-}
-
 a {
   transition: 0.4s ease;
 }
@@ -190,7 +186,7 @@ section {
   gap: math.rem(12);
 
   padding: math.rem(60) 0;
-  max-width: math.rem(426);
+  // max-width: math.rem(426);
 }
 
 #about-container {
@@ -724,10 +720,6 @@ section {
 
   #about-text-container {
     padding: 0 math.rem(20);
-  }
-
-  .nowrap {
-    white-space: wrap;
   }
 }
 
