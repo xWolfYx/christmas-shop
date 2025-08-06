@@ -2,7 +2,7 @@ import { showModal } from "./modals.js";
 
 let allCards = [];
 const cards = document.getElementById("cards");
-const filterBtns = document.querySelectorAll(".tab");
+const tabsElem = document.getElementById("tabs");
 
 const categoryImg = {
   "For Work": "./assets/images/gifts/gift-for-work.png",
@@ -10,18 +10,7 @@ const categoryImg = {
   "For Harmony": "./assets/images/gifts/gift-for-harmony.png",
 };
 
-filterBtns.forEach((btn) =>
-  btn.addEventListener("click", function () {
-    filterCards(this);
-  })
-);
-
-filterBtns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    filterBtns.forEach((btn) => btn.classList.remove("active-filter-btn"));
-    btn.classList.add("active-filter-btn");
-  });
-});
+tabsElem.addEventListener("click", (e) => filterCards(e));
 
 loadGifts();
 
@@ -48,13 +37,17 @@ function shuffleCards(array) {
   }
 }
 
-function filterCards(category) {
-  const value = category.textContent.trim();
-  if (value === "All") {
+function filterCards(e) {
+  if (!e.target.classList.contains("tab")) return;
+
+  if (e.target.dataset.category === "All") {
+    setActiveTab(e);
     renderCards(allCards);
   } else {
-    const filteredCards = allCards.filter((card) => card.category === value);
+    const category = e.target.dataset.category;
+    const filteredCards = allCards.filter((card) => card.category === category);
     renderCards(filteredCards);
+    setActiveTab(e);
   }
 }
 
@@ -78,4 +71,11 @@ function renderCards(data) {
     .join("");
   cards.innerHTML = cardsDom;
   showModal(data);
+}
+
+function setActiveTab(e) {
+  [...e.target.parentElement.children].forEach((child) =>
+    child.classList.remove("active-filter-btn")
+  );
+  e.target.classList.add("active-filter-btn");
 }
