@@ -1,15 +1,20 @@
+const scrollThresholdEl = document.createElement("div");
+scrollThresholdEl.setAttribute("class", "scroll-threshold");
+document.body.prepend(scrollThresholdEl);
 const topScrollButton = document.getElementById("top-btn");
-const SCROLL_THRESHOLD = 300;
+const scrollButtonObserver = new IntersectionObserver(toggleScrollBtn, {
+  root: null,
+  threshold: 0,
+});
 
-window.addEventListener("scroll", toggleScrollButton);
-
+scrollButtonObserver.observe(scrollThresholdEl);
 topScrollButton.addEventListener("click", scrollUp);
 
-function toggleScrollButton() {
-  topScrollButton.classList.toggle(
-    "top-btn-display",
-    window.scrollY > SCROLL_THRESHOLD
-  );
+function toggleScrollBtn(entries) {
+  const [entry] = entries;
+  entry.isIntersecting
+    ? topScrollButton.classList.remove("top-btn-display")
+    : topScrollButton.classList.add("top-btn-display");
 }
 
 function scrollUp() {
